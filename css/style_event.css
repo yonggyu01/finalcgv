@@ -1,5 +1,6 @@
 #cgvWrap{
     position: relative;
+    overflow: hidden;
 }
 
 /*fixedBtn*/
