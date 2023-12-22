@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cgv_moviechart.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/cgv_moviechart.js"></script>
+    <title>movie_chart</title>
+</head>
+<body>
+    <div id="cgvWrap">
+        <div class="fixedBtn">
+            <a href="" class="btn_ticket">예매하기</a>
+            <a href="" class="btn_gotoTop"><img src="../img/gotoTop.png" alt=""></a>
+        </div>    
+
+        <div class="fixedNav">
+            <div class="fixedNav_wrap">
+                <h2><a href="../index.html"><img src="../img/logoWhite.png" alt=""></a></h2>
+                <ul class="nav_menu">
+                    <li>
+                        <a href="../html/cgv_movie_cart.html">영화</a>
+                        <dl class="sub_menu"> 
+                            <dt><a href="../html/cgv_movie_cart.html">영화</a></dt>
+                            <dd><a href="../html/cgv_movie_cart.html">무비차트</a></dd>
+                            <dd><a href="../html/CGV_arthouse.html">아트하우스</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <a href="../html/CGV_theater.html">극장</a>
+                        <dl class="sub_menu"> 
+                            <dt><a href="../html/CGV_theater.html">극장</a></dt>
+                            <dd><a href="../html/CGV_theater.html">특별관</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <a href="../html/CGV_schedule.html">예매</a>
+                        <dl class="sub_menu"> 
+ 
+                            <dd><a href="../html/CGV_schedule.html">상영스케줄</a></dd>
+
+                        </dl>
+                    </li>
+                    <li>
+                        <a href="../html/CGV_store.html">스토어</a>
+                        <dl class="sub_menu"> 
+                            <dt><a href="../html/CGV_store_pack.html">패키지</a></dt>
+                            <dd><a href="../html/CGV_store_movieticket.html">영화관람권</a></dd>
+                            <dd><a href="../html/CGV_store_gift.html">기프트카드</a></dd>
+                            <dd><a href="../html/CGV_store_combo.html">콤보</a></dd>
+                            <dd><a href="../html/CGV_store_pop.html">팝콘</a></dd>
+                            <dd><a href="../html/CGV_store_snack.html">스낵</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <a href="../html/CGV_event.html">이벤트</a>
+                        <dl class="sub_menu"> 
+                            <dt><a href="../html/CGV_event.html">카드뒤집기</a></dt>
+                        </dl>
+                    </li>
+                    <li>
+                        <a href="../html/CGV_sale.html">혜택</a>
+                        <dl class="sub_menu"> 
+                            <dt><a href="../html/CGV_sale.html">혜택</a></dt>
+                        </dl>
+                    </li>
+                </ul>
+
+                <div class="search_wrap">
+                    <form action="" name="searchtxt" id="searchtxt">
+                        <fieldset>
+                            <legend class = 'xx'> 검색창</legend>
+                            <label for="text_search" class="xx">입력창</label> 
+                            
+                            <input type="text" id="text_search">
+                            
+                            <button class="fixedbtn_search">검색</button>
+                        </fieldset>
+                 </form>
+                </div>
+            </div>
+        </div>  
+
+        <header>
+            <div class="adTop">
+                <div class="adTop_wrap">
+                    <img src="../img/adtop_banner.jpg" alt="">
+                    <a href="#none">
+                        <img src="../img/btn_ad_close.png" alt="" class="btn_close">
+                    </a>
+                </div>
+            </div>
+
+            <div class="headerTop">
+                <h1 class="logo">
+                    <a href="../CGV.html">
+                        <img src="../img/logoRed.png" alt="">
+                    </a>
+                    <span class="cultureplex">CULTUREPLEX</span>
+                </h1>
+                
+                <div class="member">
+                    <div class="ad_partner">
+                        <a href="#none"><img src="../img/top_small_banner.png" alt=""></a>
+                    </div>
+                    <ul class=login_menu>
+                        <li><a href=""><img src="../img/loginPassword.png" alt="">로그인</a></li>
+                        <li><a href=""><img src="../img/loginJoin.png" alt="">회원가입</a></li>
+                        <li><a href=""><img src="../img/loginMember.png" alt="">MY CGV</a></li>
+                        <li><a href=""><img src="../img/loginCustomer.png" alt="">고객센터</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <nav>
+                <div class="nav_wrap">
+                    <div class="nav_bg">
+                        
+                    </div>
+                    <ul class="nav_menu">
+                        <li>
+                            <a href="../html/cgv_movie_cart.html">영화</a>
+                            <dl class="sub_menu"> 
+                                <dt><a href="../html/cgv_movie_cart.html">영화</a></dt>
+                                <dd><a href="../html/cgv_movie_cart.html">무비차트</a></dd>
+                                <dd><a href="../html/CGV_arthouse.html">아트하우스</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <a href="../html/CGV_theater.html">극장</a>
+                            <dl class="sub_menu"> 
+                                <dt><a href="../html/CGV_theater.html">극장</a></dt>
+    
+                                <dd><a href="../html/CGV_specialHall.html">특별관</a></dd>
+                            </dl> 
+                        </li>
+                        <li>
+                            <a href="../html/CGV_schedule.html"><strong>예매</strong></a>
+                            <dl class="sub_menu"> 
+     
+                                <dd><a href="../html/CGV_schedule.html">상영스케줄</a></dd>
+
+                            </dl>
+                            <li>
+                                <a href="../html/CGV_store.html">스토어</a>
+                                <dl class="sub_menu"> 
+                                    <dt><a href="../html/CGV_store_pack.html">패키지</a></dt>
+                                    <dd><a href="../html/CGV_store_movieticket.html">영화관람권</a></dd>
+                                    <dd><a href="../html/CGV_store_gift.html">기프트카드</a></dd>
+                                    <dd><a href="../html/CGV_store_combo.html">콤보</a></dd>
+                                    <dd><a href="../html/CGV_store_pop.html">팝콘</a></dd>
+                                    <dd><a href="../html/CGV_store_snack.html">스낵</a></dd>
+                                </dl>
+                            </li>
+                        <li>
+                            <a href="../html/CGV_event.html">이벤트</a>
+                            <dl class="sub_menu"> 
+                                <dt><a href="../html/CGV_event.html">카드뒤집기</a></dt>
+ 
+                            </dl>
+                        </li>
+                        <li>
+                            <a href="../html/CGV_sale.html">혜택</a>
+                            <dl class="sub_menu notthisone"> 
+                                <dt><a href="../html/CGV_sale.html">혜택</a></dt>
+                            </dl>
+                        </li>
+                    </ul>
+
+                    <div class="search_wrap">
+                        <form action="" name="searchtxt" id="searchtxt">
+                            <fieldset>
+                                <legend class = 'xx'> 검색창</legend>
+                                <label for="text_search" class="xx">입력창</label> 
+                                
+                                <input type="text" id="text_search">
+                                
+                                <button class="fixedbtn_search">검색</button>
+                            </fieldset>
+                     </form>
+                    </div>
+                </div>
+            </nav>  
+
+        </header>
+
+    <main>
+    <section class="moviechart">
+        <h1>무비차트<a href="../html/cgv_movie_cart.html">무비차트</a></h1>
+
+        <form action="" method="get" name="check" id="check">
+            <fieldset id="checkbox1">
+                <legend class="xx"> 상영작 체크버튼 </legend>
+                <input type="checkbox" name="checkb" id="checkb">
+                <label for="checkb">현재 상영작만 보기</label>
+            </fieldset>
+            <fieldset id = 'sortbox'>
+                <select name="sort" id="sortitem">
+                    <option value="0">예매율순</option>
+                    <option value="1">평점순</option>
+                    <option value="2">관람객순</option>
+                </select>
+                <button>GO</button>
+            </fieldset>
+        </form>    
+        <section class='main_movie'>
+        <h2 class="xx">무비차트 - 예매율순</h2>
+            <ol class="firstol">
+                <li>
+                    <span class="num_rank">No.1</span>
+                    <div class="img_wrap">
+                        <img src="../images/no1.jpg" alt="no1" data-id="서울의 봄 /n 감독 : 김성수  배우 :  황정민 ,  정우성 ,  이성민 ,  박해준 ,  김성균 /n 감독 : 김성수  배우 :  황정민 ,  정우성 ,  이성민 ,  박해준 ,  김성균 /n br 1979년 12월 12일, 수도 서울 군사반란 발생 br 그날, 대한민국의 운명이 바뀌었다 br  br 대한민국을 뒤흔든 10월 26일 이후, br 서울에 새로운 바람이 불어온 것도 잠시 br 12월 12일, 보안사령관 전두광이 반란을 일으키고 br 군 내 사조직을 총동원하여 최전선의 전방부대까지 서울로 불러들인다. br &nbsp; br 권력에 눈이 먼 전두광의 반란군과 br 이에 맞선 수도경비사령관 이태신을 비롯한 진압군 사이, br 일촉즉발의 9시간이 흘러가는데… br &nbsp;&nbsp; br 목숨을 건 두 세력의 팽팽한 대립 br 오늘 밤, 대한민국 수도에서 가장 치열한 전쟁이 펼쳐진다!">
+                        <p class="age12">12</p>
+                        <div class="cgvflex">
+                            <p class="imax xx">IMAX</p>
+                            <p class="4dx">4DX</p>
+                            <p class="screenx xx">SCREENX</p>
+                        </div>
+                    </div>
+                    <div class="textwrap">
+                    <h3>서울의 봄</h3>
+                    <div class="textsubwrap">
+                    <p>예매율 :<span class="ticketsales">52.2%</span></p>
+                    <p><span class="wrap">
+                            <span class="result"></span>
+                            <span class="tomato">99%</span>
+                        </span>
+                    </p>
+                </div>
+                       <p class="resultdate"> 2023.11.22 개봉 <span class="dday"></span></p> 
+                       <a href="#none"> 예매하기</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="num_rank">No.2</span>
+                    <div class="img_wrap">
+                        <img src="../images/no2.jpg" alt="no1" data-id="나폴레옹,">
+                        <p class="age15">15</p>
+                        <div class="cgvflex">
+                            <p class="imax">IMAX</p>
+                            <p class="4dx">4DX</p>
+                            <p class="screenx xx">SCREENX</p>
+                        </div>
+                    </div>
+                    <div class="textwrap">
+                    <h3>나폴레옹</h3>
+                    <div class="textsubwrap">
+                        <p>예매율 :
+                            <span class="ticketsales">18.2%</span></p>
+                        <p><span class="wrap">
+                                <span class="result"></span>
+                                <span class="tomato"> 81%</span>
+                            </span>
+                        </p>
+                    </div>
+                       <p class="resultdate">  2023.12.06  개봉 <span class="dday"></span></p> 
+                       <a href="#none"> 예매하기</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="num_rank">No.3</span>
+                    <div class="img_wrap">
+                        <img src="../images/no3.jpg" alt="no1" data-id="나폴레옹,">
+                        <p class="ageAll">All</p>
+                        <div class="cgvflex">
+                            <p class="imax xx">IMAX</p>
+                            <p class="4dx xx">4DX</p>
+                            <p class="screenx">SCREENX</p>
+                        </div>
+                    </div>
+                    <div class="textwrap">
+                    <h3>3일의 휴가</h3>
+                    <div class="textsubwrap">
+                        <p>예매율 :
+                            <span class="ticketsales">10.2%</span></p>
+                        <p><span class="wrap">
+                                <span class="result"></span>
+                                <span class="tomato"> 92%</span>
+                            </span>
+                        </p>
+                    </div>
+                       <p class="resultdate">  2023.12.06  개봉 <span class="dday"></span></p> 
+                       <a href="#none"> 예매하기</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="num_rank">No.4</span>
+                    <div class="img_wrap">
+                        <img src="../images/no4.jpg" alt="no1" data-id="엔시티네이션,">
+                        <p class="age18">18</p>
+                        <div class="cgvflex">
+                            <p class="imax xx">IMAX</p>
+                            <p class="4dx xx">4DX</p>
+                            <p class="screenx xx">SCREENX</p>
+                        </div>
+                    </div>
+                    <div class="textwrap">
+                    <h3>엔시티 네이션 : 투 더 월드 인 시네마</h3>
+                    <div class="textsubwrap">
+                        <p>예매율 :
+                            <span class="ticketsales">8.1%</span></p>
+                        <p><span class="wrap">
+                                <span class="result"></span>
+                                <span class="tomato"> 92%</span>
+                            </span>
+                        </p>
+                    </div>
+                       <p class="resultdate">  2023.12.06  개봉 <span class="dday"></span></p> 
+                       <a href="#none"> 예매하기</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="num_rank">No.5</span>
+                    <div class="img_wrap">
+                        <img src="../images/no5.jpg" alt="no1" data-id="엔시티네이션,">
+                        <p class="age12">12</p>
+                        <div class="cgvflex">
+                            <p class="imax">IMAX</p>
+                            <p class="4dx">4DX</p>
+                            <p class="screenx xx">SCREENX</p>
+                        </div>
+                    </div>
+                    <div class="textwrap">
+                    <h3>듄</h3>
+                    <div class="textsubwrap">
+                        <p>예매율 :
+                            <span class="ticketsales">5.1%</span></p>
+                        <p><span class="wrap">
+                                <span class="result"></span>
+                                <span class="tomato"> 90%</span>
+                            </span>
+                        </p>
+                    </div>
+                       <p class="resultdate">  2023.12.06  재개봉 <span class="dday"></span></p> 
+                       <a href="#none"> 예매하기</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="num_rank">No.6</span>
+                    <div class="img_wrap">
+                        <img src="../images/no6.jpg" alt="no1" data-id="엔시티네이션,">
+                        <p class="age18">18</p>
+                        <div class="cgvflex">
+                            <p class="imax xx">IMAX</p>
+                            <p class="4dx xx">4DX</p>
+                            <p class="screenx xx">SCREENX</p>
+                        </div>
+                    </div>
+                    <div class="textwrap">
+                    <h3>괴물</h3>
+                    <div class="textsubwrap">
+                        <p>예매율 :
+                            <span class="ticketsales">3.4%</span></p>
+                        <p><span class="wrap">
+                                <span class="result"></span>
+                                <span class="tomato"> 95%</span>
+                            </span>
+                        </p>
+                    </div>
+                       <p class="resultdate">  2023.11.26  개봉 <span class="dday"></span></p> 
+                       <a href="#none"> 예매하기</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="num_rank">No.7</span>
+                    <div class="img_wrap">
+                        <img src="../images/no7.jpg" alt="no1" data-id="엔시티네이션,">
+                        <p class="age12">12</p>
+                        <div class="cgvflex">
+                            <p class="imax xx">IMAX</p>
+                            <p class="4dx xx">4DX</p>
+                            <p class="screenx">SCREENX</p>
+                        </div>
+                    </div>
+                    <div class="textwrap">
+                    <h3>싱글 인 서울</h3>
+                    <div class="textsubwrap">
+                        <p>예매율 :
+                            <span class="ticketsales">2.8%</span></p>
+                        <p><span class="wrap">
+                                <span class="result"></span>
+                                <span class="tomato"> 93%</span>
+                            </span>
+                        </p>
+                    </div>
+                       <p class="resultdate">  2023.11.29  개봉 <span class="dday"></span></p> 
+                       <a href="#none"> 예매하기</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="num_rank">No.8</span>
+                    <div class="img_wrap">
+                        <img src="../images/no8.jpg" alt="no1" data-id="엔시티네이션,">
+                        <p class="ageAll">All</p>
+                        <div class="cgvflex">
+                            <p class="imax">IMAX</p>
+                            <p class="4dx xx">4DX</p>
+                            <p class="screenx">SCREENX</p>
+                        </div>
+                    </div>
+                    <div class="textwrap">
+                    <h3>노량-죽음의 바다</h3>
+                    <div class="textsubwrap">
+                        <p>예매율 :
+                            <span class="ticketsales">2.7%</span></p>
+                        <p><span class="wrap">
+                                <span class="result"></span>
+                                <span class="tomato"> 93%</span>
+                            </span>
+                        </p>
+                    </div>
+                       <p class="resultdate">  2023.12.20  개봉 <span class="dday"></span></p> 
+                       <a href="#none"> 예매하기</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="num_rank">No.9</span>
+                    <div class="img_wrap">
+                        <img src="../images/no9.jpg" alt="no1" data-id="엔시티네이션,">
+                        <p class="ageAll">All</p>
+                        <div class="cgvflex">
+                            <p class="imax xx">IMAX</p>
+                            <p class="4dx xx">4DX</p>
+                            <p class="screenx xx">SCREENX</p>
+                        </div>
+                    </div>
+                    <div class="textwrap">
+                    <h3>SEVENTEEN TOUR ‘FOLLOW’ TO JAPAN ： LIVE VIEWING</h3>
+                    <div class="textsubwrap">
+                        <p>예매율 :
+                            <span class="ticketsales">2.6%</span></p>
+                        <p><span class="wrap">
+                                <span class="result"></span>
+                                <span class="tomato"> 99%</span>
+                            </span>
+                        </p>
+                    </div>
+                       <p class="resultdate">  2023.12.16  개봉 <span class="dday">D-7</span></p> 
+                       <a href="#none"> 예매하기</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="num_rank">No.10</span>
+                    <div class="img_wrap">
+                        <img src="../images/no10.jpg" alt="no1" data-id="엔시티네이션,">
+                        <p class="ageAll">All</p>
+                        <div class="cgvflex">
+                            <p class="imax xx">IMAX</p>
+                            <p class="4dx xx">4DX</p>
+                            <p class="screenx xx">SCREENX</p>
+                        </div>
+                    </div>
+                    <div class="textwrap">
+                    <h3> 뽀로로 극장판 슈퍼스타 대모험</h3>
+                    <div class="textsubwrap">
+                        <p>예매율 :
+                            <span class="ticketsales">2.4%</span></p>
+                        <p><span class="wrap">
+                                <span class="result"></span>
+                                <span class="tomato"> 97%</span>
+                            </span>
+                        </p>
+                    </div>
+                       <p class="resultdate">  2023.12.13  개봉 <span class="dday">D-7</span></p> 
+                       <a href="#none"> 예매하기</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="num_rank">No.11</span>
+                    <div class="img_wrap">
+                        <img src="../images/no11.jpg" alt="no1" data-id="엔시티네이션,">
+                        <p class="age15">15</p>
+                        <div class="cgvflex">
+                            <p class="imax xx">IMAX</p>
+                            <p class="4dx xx">4DX</p>
+                            <p class="screenx xx">SCREENX</p>
+                        </div>
+                    </div>
+                    <div class="textwrap">
+                    <h3> 마에스트로 번스타인</h3>
+                    <div class="textsubwrap">
+                        <p>예매율 :
+                            <span class="ticketsales">1%</span></p>
+                        <p><span class="wrap">
+                                <span class="result"></span>
+                                <span class="tomato"> 87%</span>
+                            </span>
+                        </p>
+                    </div>
+                       <p class="resultdate">  2023.12.06  개봉 <span class="dday">D-7</span></p> 
+                       <a href="#none"> 예매하기</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="num_rank">No.12</span>
+                    <div class="img_wrap">
+                        <img src="../images/no12.jpg" alt="no1" data-id="엔시티네이션,">
+                        <p class="ageAll">All</p>
+                        <div class="cgvflex">
+                            <p class="imax xx">IMAX</p>
+                            <p class="4dx xx">4DX</p>
+                            <p class="screenx xx">SCREENX</p>
+                        </div>
+                    </div>
+                    <div class="textwrap">
+                    <h3> 매직 프린세스-얼음 괴물과 사라진 열쇠의 비밀</h3>
+                    <div class="textsubwrap">
+                        <p>예매율 :
+                            <span class="ticketsales">0.9%</span></p>
+                        <p><span class="wrap">
+                                <span class="result"></span>
+                                <span class="tomato"> 94%</span>
+                            </span>
+                        </p>
+                    </div>
+                       <p class="resultdate">  2023.12.07  개봉 <span class="dday">D-7</span></p> 
+                       <a href="#none"> 예매하기</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="num_rank">No.13</span>
+                    <div class="img_wrap">
+                        <img src="../images/no13.jpg" alt="no1" data-id="엔시티네이션,">
+                        <p class="ageAll">All</p>
+                        <div class="cgvflex">
+                            <p class="imax xx">IMAX</p>
+                            <p class="4dx xx">4DX</p>
+                            <p class="screenx xx">SCREENX</p>
+                        </div>
+                    </div>
+                    <div class="textwrap">
+                    <h3> 비투비 타임: 비투게더 더 무비</h3>
+                    <div class="textsubwrap">
+                        <p>예매율 :
+                            <span class="ticketsales">0.9%</span></p>
+                        <p><span class="wrap">
+                                <span class="result"></span>
+                                <span class="tomato"> 99%</span>
+                            </span>
+                        </p>
+                    </div>
+                       <p class="resultdate">  2023.11.15  개봉 <span class="dday">D-7</span></p> 
+                       <a href="#none"> 예매하기</a>
+                    </div>
+                </li>
+            </ol>
+            <a href="#none" class="morelink"> 더보기 <span class="moreb">+</span></a>
+
+    
+        <!-- 정렬도 해야함...
+        
+        No.14 교토에서 온 편지 포스터 12 아트하우스
+        교토에서 온 편지
+        예매율0.9%
+        92%
+        2023.12.06 개봉 예매
+        No.15 홈그라운드 포스터 12 아트하우스
+        홈그라운드
+        예매율0.8%
+        83%
+        2023.12.06 개봉 예매
+        No.16 프레디의 피자가게 포스터 12
+        프레디의 피자가게
+        예매율0.5%
+        83%
+        2023.11.15 개봉 예매
+        No.17 나 혼자만 레벨업 프리뷰 포스터 18
+        나 혼자만 레벨업 프리뷰
+        예매율0.5%
+        99%
+        2023.12.13 개봉 D-5 예매
+        No.18 듄+듄:파트2 특별영상 포스터 18 IMAX
+        듄+듄:파트2 특별영상
+        예매율0.4%
+        ?
+        2023.12.08 개봉 예매
+        No.19 극장판 파워 디지몬 더 비기닝 포스터 12
+        극장판 파워 디지몬 더 비기닝
+        예매율0.3%
+        79%
+        2023.11.29 개봉 예매
+        더보기 더보기 -->
+       
+    </section>
+
+
+
+
+
+    </section>
+</main>
+<footer>
+    <div class="footer_ad">
+        <a href="#none" target="_blank">
+            <img src="../img/980x240.png" alt="">
+        </a>
+    </div>
+    <div class="footer_wrap">
+        <section class="policy">
+            <ul class="policy_list">
+                <li><a href="#none" target="_blank">회사소개</a></li>
+                <li><a href="#none" target="_blank">지속가능경영</a></li>
+                <li><a href="#none" target="_blank">IR</a></li>
+                <li><a href="#none" target="_blank">채용정보</a></li>
+                <li><a href="#none" target="_blank">광고/제휴/출점문의</a></li>
+                <li><a href="#none" target="_blank">이용약관</a></li>
+                <li><a href="#none" target="_blank">편성기준</a></li>
+                <li><a href="#none" target="_blank"><strong>개인정보처리방침</strong></a></li>
+                <li><a href="#none" target="_blank">법적고지</a></li>
+                <li><a href="#none" target="_blank">이메일주소무단수집거부</a></li>
+                <li><a href="#none" target="_blank">윤리경영</a></li>
+                <li><a href="#none" target="_blank">사이버감사실</a></li>
+            </ul>
+        </section>
+
+        <div class="footer_info_wrap"> 
+            <section class="company">
+                <address>(04377) 서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</address>
+                <dl class="company_list">
+                    <dt>대표이사</dt>
+                    <dd>허민회</dd>
+                    <dt>사업자등록번호</dt>
+                    <dd>104-81-45690</dd>
+                    <dt>통신판매업신고번호</dt>
+                    <dd>2017-서울용산-0662 <a href="#none" class="btn_goFtc">사업자정보확인</a></dd>
+                </dl>
+                <dl class="company_list">
+                    <dt>호스팅사업자</dt>
+                    <dd>CJ올리브네트웍스</dd>
+                    <dt>개인정보보호 책임자</dt>
+                    <dd>도형구</dd>
+                    <dt>대표이메일</dt>
+                    <dd>cjcgvmaster@cj.net</dd>
+                </dl>
+                <p class="copyright">© CJ CGV. All Rights Reserved</p>
+            </section>
+
+            <section class="familysite">
+                <div class="familysite_wrap">
+                    <h3><a href="#none">계열사 바로가기</a></h3>
+                    <dl class="familysite_list">
+                        <dt>&nbsp;&nbsp;&nbsp;CJ그룹</dt>
+                            <dd>&nbsp;&nbsp;CJ주식회사</dd>
+                        <dt>&nbsp;&nbsp;&nbsp;식품 및 식당서비스</dt>
+                            <dd>&nbsp;&nbsp;CJ제일제당</dd>
+                            <dd>&nbsp;&nbsp;CJ푸드빌</dd>
+                            <dd>&nbsp;&nbsp;CJ프레시웨이</dd> 
+                        <dt>&nbsp;&nbsp;&nbsp;생명공학</dt>
+                            <dd>&nbsp;&nbsp;CJ제일제당 bio사업부분</dd>
+                            <dd>&nbsp;&nbsp;CJFeed＆Card</dd>
+                        <dt>&nbsp;&nbsp;&nbsp;물류 신유통</dt>
+                            <dd>&nbsp;&nbsp;CJ대한통운</dd>
+                            <dd>&nbsp;&nbsp;CJ대한통운 건설부문</dd>
+                            <dd>&nbsp;&nbsp;CJ올리브영</dd>
+                            <dd>&nbsp;&nbsp;CJ올리브네트웍스</dd>
+                            <dd>&nbsp;&nbsp;CJ ENM 커머스부문</dd>
+                        <dt>&nbsp;&nbsp;&nbsp;엔터테인먼트 미디어</dt>
+                            <dd>&nbsp;&nbsp;CJ ENM 엔터테인먼트 부문</dd>
+                            <dd>&nbsp;&nbsp;CJ CGV</dd>    
+                    </dl>
+                </div>
+                <div class="go"><a href="" title="선택한 계열사로 이동">GO</a></div>
+            </section>
+        </div>     
+    </div>
+</footer>
+
+</div>
+
+    
+</body>
+</html>

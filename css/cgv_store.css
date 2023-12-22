@@ -1,0 +1,363 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 16px;
+}
+a,address{
+    color:inherit;
+    text-decoration: none;
+    border: 0 none;
+}
+.xx{
+    display: block;
+    width: 0 !important;
+    height: 0 !important;
+    text-indent: -999999999px;
+    overflow :hidden;
+    line-height: 0;
+    border: 0 none !important;
+}
+/* 초기화  */
+.font_red{
+    color: orangered !important;
+}
+.main{
+    min-width: 1040px;
+}
+.fullsizewrap{
+    width: 980px;
+    margin: 0 auto;
+}
+.main h1{font-size: 2em;
+    border-bottom:  3px solid black;
+    padding:30px 0  15px;
+}
+.storetapmenu{
+    display: flex;
+    width: 980px;
+    height: 50px;
+    border-bottom: 1px solid #666;
+    align-items: center;
+    margin-bottom: 90px;
+}
+.storegiftcon li a{ color : black;
+font-weight: bold;}
+.storegiftcon{
+    display: flex;
+    width: 35%;
+    justify-content: space-evenly;
+}
+.storegiftcon li:first-child {
+    border-left: 1px solid #666;
+    padding-left: 30px;
+}
+.storegiftcon li span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    text-align: center;
+    color:white ;
+}
+.storetapmenu ul:first-child{
+    display: flex;
+    width: 65%;
+    justify-content: space-between;
+}
+.storetapmenu a{
+    color:#666;
+    font-size: 1em;
+    font-weight: bold
+}
+
+.storefontchange::after{
+    content:'';
+    position: absolute;
+    top : 5px;
+    right:0px;
+    width: 25px;
+    height: 25px;
+    background-image: url(../images/bg_moreBtn.png);
+    background-repeat: no-repeat;
+
+}
+.storefontchange{
+    overflow: hidden;
+    line-height: 0;
+    display: inline-block;
+}
+.storemainwrapbox h2{
+    font-size: 1.5em;
+    position: relative;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #666;
+    margin-bottom: 20px;
+    width: 100%;
+   
+}
+/* 패키지 장바구니 버튼_태그 작성시 기입을 안해서..  스크립트로 붙이기 */
+
+
+/*  */
+
+.storemainwrapbox>ul{
+    display: flex;
+    flex-flow: row wrap;
+    width: 980px;
+}
+.storemainwrapbox>ul>li:first-child{
+    width: 100%;
+    margin-bottom: 70px;
+}
+.storemainwrapbox>ul>li:first-child ul{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+.packwrap{
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+.packwrap p:not(:last-child){
+color: #666;
+}
+.packbold span{
+    text-decoration: line-through;
+    color:#666;
+}
+.onlineblue{
+    color :blue;
+}
+
+.storemainwrapbox>ul>li>ul>li>div:not(.nono){
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+
+.storemainwrapbox>ul>li:first-child ul li img{
+    width: 100%;
+}
+
+.storemainwrapbox>ul>li:nth-child(2){
+    width: 50%;
+    padding-right: 30px;
+    box-sizing: border-box;
+    margin-bottom: 70px;
+}
+.storemainwrapbox>ul>li:nth-child(2) img,.storemainwrapbox>ul>li:nth-child(3) img,.storemainwrapbox>ul>li:nth-child(4) img{
+    width: 160px;
+}
+
+.storemainwrapbox>ul>li:nth-child(3){
+    padding-left: 30px;
+ width: 50%;
+ box-sizing: border-box;
+
+}
+.storemainwrapbox>ul>li:nth-child(4){
+width: 50%;
+padding-right: 30px;
+box-sizing: border-box;
+margin-bottom: 70px;
+}
+.packbold{
+    font-size: 1.15em;
+    font-weight: bold;
+}
+/* .storemainwrapbox>ul>li:nth-child(2)>a,.storemainwrapbox>ul>li:nth-child(3)>a,.storemainwrapbox>ul>li:nth-child(4)>a{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    box-sizing: border-box;
+} */
+.moviewrap h3,.snackwrap h3,.giftcardwrap h3{
+    margin-bottom: 8px;
+}
+.moviewrap p:not(.packbold),.giftcardwrap p:not(.packbold),.snackwrap p:not(.packbold){
+    color: #666;
+    margin-bottom: 10px;
+}
+.moviewrap,.snackwrap,.giftcardwrap{
+    padding-left: 20px;
+    position: relative;
+    box-sizing: border-box;
+    height: 100px;
+}
+.packhoverwrap{
+    width: 100%;
+    position: relative;
+}
+.hoverbox1{
+    position: absolute;
+    top:0;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.572);
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.hoverbox1 a{
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #0b0b0b;
+    white-space: wrap;
+    font-size: 17px;    
+    color : white;
+    vertical-align: middle;
+    text-align: center;
+    text-indent: -9999px;
+    background-image: url(../images/bg_icon_setBtn.png);
+    background-repeat: no-repeat
+}
+.hoverbox{
+    position: absolute;
+    top:0;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.671);
+    width: 300px;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.hoverbox a{
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #0b0b0b;
+    background-image: url(../images/bg_icon_setBtn.png);
+    white-space: wrap;
+    font-size: 17px;    
+    color : white;
+    vertical-align: middle;
+    text-align: center;
+    text-indent: -9999px;
+    background-repeat: no-repeat
+    ;
+}
+.hoverbox a:first-child,.hoverbox1 a:first-child{
+    background-position: -1px 0px
+}
+.hoverbox a:nth-child(2),.hoverbox1 a:nth-child(2){
+    background-position: -53px 0px;
+}
+
+.hoverbox a:nth-child(3),.hoverbox1 a:nth-child(3){
+    background-position: -105px 0px;
+}
+
+
+.hoverbox a:first-child:hover{
+    background-position: -157px 0px;
+}
+.hoverbox a:nth-child(2):hover{
+    background-position: -209px 0px;
+}
+.hoverbox a:nth-child(3):hover{
+    background-position: -261px 0px;
+}
+.hoverbox1 a:first-child:hover{
+    background-position: -157px 0px;
+}
+.hoverbox1 a:nth-child(2):hover{
+    background-position: -209px 0px;
+}
+.hoverbox1 a:nth-child(3):hover{
+    background-position: -261px 0px;
+}
+.packwrap:hover .hoverbox1{
+    display: flex;
+}
+.storemainwrapbox>ul>li>ul>li>div:hover .hoverbox{
+    display: flex;
+}
+
+/* 기프트샵 이용안내 */
+.storeinfo{
+    width: 980px;  
+    display: flex;
+    margin-bottom: 20px;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+}
+.storeinfowrap{
+width: 35%;
+padding: 25px 0 23px 43px;
+}
+.storemid{
+    width: 24%;
+}
+.storeright{
+width: 41%;
+margin:25px 0 23px; 
+padding-left:50px ;
+border-left:  1px solid #666;
+}
+.storeright span{
+    content:'';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-image: url(images/bg_info_banner_call_icon.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.storemid{
+    background-image: url(images/bg_info_banner_icon.png);
+    background-repeat: no-repeat;
+    background-position: 0 30px;
+
+}
+.storeinfoleft h3{
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-bottom: 25px;
+    position: relative;
+}
+.storeinfoleft a::after{
+    content: '>';
+    cursor: pointer;
+    position: absolute;
+    top:10px;
+    right : 100px;
+    font-size: 25px;
+}
+.storeinfoleft a{
+    display: inline-block;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.storeright h3{
+
+    font-size: 1.2em;
+    margin-bottom: 2px;
+}
+.storeright p:not(:last-child){
+    font-size: 1.6em;
+    font-weight: 300;
+    display: flex;
+    gap:5px
+}
+
+/* cgv 디테일 페이지는 하나만 만들고   만약 내가 무언가 상품을 클릭했을때
+    상품의 정보를 localstorage에 저장했다가 해당 정보를 불러와서 
+    디테일 페이지에 뿌려주는 형식으로 해야할듯함
+    상품의 정보로 필요한 내용은 가격과 사진이미지.  그리고 태그 이름정도?
+*/

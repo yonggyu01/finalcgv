@@ -1,0 +1,215 @@
+:root{
+    --agewidth : 20px;
+    --ageheight : 20px;
+    --agefont : 1.1em;
+    --ageline : 20px;
+    --ageleft : 10px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+a,address{
+    color:inherit;
+    text-decoration: none;
+    border: 0 none;
+}
+fieldset{
+    border: 0 none;
+}
+
+.xx{
+    display: block;
+    width: 0 !important;
+    height: 0 !important;
+    text-indent: -999999999px;
+    overflow :hidden;
+    line-height: 0;
+    border: 0 none !important;
+}
+/* 초기화 */
+main{
+    width: 980px;
+    margin: 0 auto;
+
+}
+.main_movie{
+    border-top: 30px solid transparent;
+    display: flex;
+    flex-flow: row;
+    margin-bottom: 30px;
+}
+
+.num_rank{
+display: flex;
+height: 28px;
+background-color: orangered;
+color: white;
+font-size: 1.3em;
+justify-content: center;
+font-weight: bold;
+align-items: center;
+margin-bottom: 3px;
+}
+.img_wrap{
+    width: 197px;
+    position: relative;
+    margin-right: 30px;
+}
+.img_wrap img{
+    width: 100%;
+}
+.age12{
+position: absolute;
+top: 5px;
+left : var(--ageleft);
+width: var(--agewidth);
+height: var(--ageheight);
+font-size: var(--agefont);
+color :white;
+background-color: rgb(240, 219, 33);
+display: flex;
+line-height: var(--ageline);
+justify-content: center;
+border-radius: 5px;
+font-weight: bold;
+}
+.age15{
+position: absolute;
+top: 5px;
+left : var(--ageleft);
+width: var(--agewidth);
+height: var(--ageheight);
+font-size: var(--agefont);
+color :white;
+background-color: rgb(240, 143, 33);
+display: flex;
+line-height: var(--ageline);
+justify-content: center;
+border-radius: 5px;
+font-weight: bold;
+}
+.age18{
+    position: absolute;
+    top: 5px;
+    left : var(--ageleft);
+    width: var(--agewidth);
+    height: var(--ageheight);
+    font-size: var(--agefont);
+    color :white;
+    background-color: rgb(240, 33, 33);
+    display: flex;
+    line-height: var(--ageline);
+    justify-content: center;
+    border-radius: 5px;
+    font-weight: bold;
+ }
+.ageAll{
+    position: absolute;
+    top: 5px;
+    left : var(--ageleft);
+    width: var(--agewidth);
+    height: var(--ageheight);
+    font-size: var(--agefont);
+    color :white;
+    background-color: rgb(3, 171, 17);
+    display: flex;
+    line-height: var(--ageline);
+    justify-content: center;
+    border-radius: 5px;
+    font-weight: bold;
+ }
+.cgvflex p{ border: 2px solid rgb(61, 203, 255);
+width: 80px;
+height: 56px;
+border-radius: 5px;
+box-sizing: border-box;
+display: flex;
+justify-content: center;
+align-items:center;
+font-size: 1.3em;}
+/* 이건 다른방식으로 처리하는것도 고민해보자. */
+.cgvflex{
+    position: absolute;
+    bottom: 20px;
+    right: -420%;
+    display: flex;
+    justify-content: center;
+    /* gap:20px; */
+    color: rgb(61, 203, 255);
+    width: 100%;
+    font-weight: bold;
+ }
+.textwrap p{font-size: 0.9em;color:gray}
+.resultdate{font-size: 0.8em;}
+.ticketsales{color:black}
+.textwrap span{
+    font-size: 0.9em;
+}
+
+.textwrap{width: 197px;
+margin-bottom: 20px;}
+.textwrap h3{
+    font-size: 2em;
+    width: 100%;
+}
+.textwrap a{
+    background-color: orangered;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 97px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    height: 23px;
+    font-weight: bold;
+    margin-left: 3px;
+}
+
+.textsubwrap .wrap .result{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/sprite_preegg.png);
+    background-position: 0 -3px;
+    background-repeat: no-repeat;
+}
+.wrap .tomato{
+   line-height: 16px;
+}
+.dday{
+    color : orangered
+}
+.textsubwrap .wrap{
+    display: flex;
+    margin-left: 8px;
+    align-items: center;
+    color: black; 
+    gap: 5px;
+}
+.textsubwrap{
+    display: flex;
+}
+.resultdate{
+    margin-bottom: 10px;
+}
+.morelink{
+    width: 1020px;
+    display: flex;
+    justify-content: end;
+}
+ .moreb{
+    display: flex;
+    justify-content: center;
+    line-height: 15px;
+    color:white;
+    box-sizing: border-box;
+    background-color: gray;
+    font-size: 1.2em;
+    width: 20px;
+    height: 20px;
+    margin: 0 50px 80px 20px;
+    border: 1px solid gray;
+ }

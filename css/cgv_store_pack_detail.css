@@ -1,0 +1,413 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 16px;
+}
+a,address{
+    color:inherit;
+    text-decoration: none;
+    border: 0 none;
+}
+.xx{
+    display: block;
+    width: 0 !important;
+    height: 0 !important;
+    text-indent: -999999999px;
+    overflow :hidden;
+    line-height: 0;
+    border: 0 none !important;
+}
+/* 초기화  */
+.font_red{
+    color: orangered !important;
+}
+.main{
+    min-width: 1040px;
+}
+.fullsizewrap{
+    width: 980px;
+    margin: 0 auto;
+}
+.main h1{font-size: 2em;
+    border-bottom:  3px solid black;
+    padding:30px 0  15px;
+}
+.storetapmenu{
+    display: flex;
+    width: 980px;
+    height: 50px;
+    border-bottom: 1px solid #666;
+    align-items: center;
+    margin-bottom: 90px;
+}
+.storegiftcon li a{ color : black;
+font-weight: bold;}
+.storegiftcon{
+    display: flex;
+    width: 35%;
+    justify-content: space-evenly;
+}
+.storegiftcon li:first-child {
+    border-left: 1px solid #666;
+    padding-left: 30px;
+}
+.storegiftcon li span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;   
+    background-color: red;
+    border-radius: 50%;
+    text-align: center;
+    color:white ;
+}
+.storetapmenu ul:first-child{
+    display: flex;
+    width: 65%;
+    justify-content: space-between;
+}
+.storetapmenu a{
+    color:#666;
+    font-size: 1em;
+    font-weight: bold
+}
+
+.detail_resultwrap h2{
+    font-size: 1.5em;
+    position: relative;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #666;
+    margin-bottom: 20px;
+    width: 100%;
+   
+}
+
+.detail_resultwrap{
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid black;
+}
+.detail_resultwrap>ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 980px;
+    /* justify-content: space-around; */
+    gap : 30px
+}
+
+.detail_resultwrap h3{
+    font-size: 1.2em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.detail_resultwrap>ul img{
+    width: 420px;
+}
+.detail_resultwrap>ul li{
+    display: flex;    
+    flex-direction: column;
+}
+.detail_resultwrap li:last-child{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 30px;
+}
+.pricewrap{
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #666;
+    border-collapse: collapse;
+}
+.pricewrap p{font-size: 1.4em;
+    font-weight: bold;
+
+}
+.retable{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #666;
+    margin-bottom: 30px;
+}
+.retable dd{ 
+    width: 418px;
+    margin-bottom: 6px;
+} 
+.retable dt{ 
+    width: 82px;
+    margin-bottom: 6px;
+}
+.change{
+    position: relative;
+    color:orangered
+}
+.subbox{
+    position: absolute;
+    top:30px;
+    border: 1px solid black;
+    width: 330px;
+    display: none;
+}
+.calculwrap{
+   display: flex;
+   justify-content: space-between; 
+   margin-bottom: 30px;
+   padding-bottom: 20px;
+   border-bottom: 2px solid #666;
+}
+.clacul{
+    display: flex;
+}
+.clacul span:not(.result){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #666;
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+.result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+    background-color: white;
+    width: 50px;
+    height: 25px;
+}
+.calcul_result_box{
+    font-size: 1.2em;
+}
+.total{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 30px;
+
+}
+.total_result{
+    display:flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 1.4em;
+    width: 130px;
+    color:orangered;
+    font-weight: bold;
+}
+.totalwrapbox{
+    display: flex;
+    justify-content: space-between;
+    width: 240px;
+    align-items: center;
+}
+.threebox{
+    display: grid;
+    grid-template-columns: 60px 210px 210px;
+    grid-template-rows: 60px;
+    grid-template-areas: "a b c";
+}
+.onebox{
+    grid-area: a;
+    width: 60px;
+    height: 60px;
+    background-color: orangered;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    background-image: url(../images/bg_cartBtn.png);
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    background-position: center;
+}
+.twobox{
+    grid-area: b;
+    background-color: black;
+    width: 200px;
+    margin-left: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.twobox p , .thrbox p{
+    font-size: 1.3em;
+
+}
+.thrbox{
+    grid-area: c;
+    background-color: black;
+    width: 200px;
+    margin-left: 10px;
+    color : white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 이용안내 */
+.notice{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    border-top: 1px solid #666;
+    border-bottom:  1px solid #666;
+}
+.notice dt{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.notice dd{
+    margin-bottom: 50px;
+}
+
+/* 이 페이지는 기본적으로 로딩될때마다 함수가 하나 실행되어야함
+    #changeimg 아이디에 src를  내가 선택한 패키지의 img에 src값을 함께 스토리지에서 가져와서
+    변경하고,
+
+    h3태그에 적혀있는 내용으로 타이틀을 저장후 불러와서 changetitle 에 해당하는 내용은 보통 
+    packbold 클래스에 적혀있는 가격을 가져와서 pricewrap 에 p태그에 넣어주고
+    result에 있는 숫자만큼 곱해서  #calcul_result_box 와 #total_result에 넣어줌
+    item_name    item_date  여기에도 상품 내용을 변경해야하고
+    변경 내용은  h3에 내용을 그대로 가져와서 item_name에 한번더 사용하고  item_date에는
+    첫번째 p태그의 내용을 가져와서 뒤에 +  유효기간 0일을 더해주자 (서버가 없으니 유효기간 자료 없음)
+
+
+    */
+
+    /* 슬라이드 */
+    .prevslidechart{padding-bottom: 30px;
+    position: relative;}
+    .prevslidechart>h3{
+        font-size: 1.5em;
+        padding-bottom: 20px;
+        border-bottom: 1px solid black;
+        margin-bottom: 10px;
+    }
+    .storemainwrapbox{
+        width: 980px;
+        position: relative;
+        overflow: hidden;
+    }
+    .storemainwrapbox ul{
+        display: flex;
+        width: 1800px;
+        transition: all 0.5s;
+        transform: translateX(0);
+    }
+    .storemainwrapbox li{
+        width: 270px;
+        margin-right: 60px;
+    }
+    .packhoverwrap{
+        height: 270px;
+        position: relative;
+    }
+    .hoverbox1{
+        position: absolute;
+        top:0;
+        display: none;
+        background-color: rgba(0, 0, 0, 0.223);
+        width: 270px;
+        height: 100%;
+        align-items: center;
+        justify-content: space-evenly;
+    
+    }
+    .hoverbox1 a{
+        display: flex;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #0b0b0b93;
+        background-image: url(../images/bg_icon_setBtn.png);
+        white-space: wrap;
+        font-size: 17px;    
+        color : white;
+        vertical-align: middle;
+        text-align: center;
+        text-indent: -9999px;
+        background-repeat: no-repeat
+        ;
+    }
+    .hoverbox a:first-child,.hoverbox1 a:first-child{
+        background-position: -1px 0px
+    }
+    .hoverbox a:nth-child(2),.hoverbox1 a:nth-child(2){
+        background-position: -53px 0px;
+    }
+    
+    .hoverbox a:nth-child(3),.hoverbox1 a:nth-child(3){
+        background-position: -105px 0px;
+    }
+    .leftrightbtn{
+        display: flex;
+        position: absolute;
+        top:40%;
+        width: 100%;
+    }
+    #leftb{
+        overflow: hidden;
+        line-height: 0;
+    }
+    #leftb::after{content: '<' ;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left:-5%;
+    height: 50px;
+    width: 50px;
+    font-size: 50px;
+    color: #666;
+
+    line-height: 45px;
+        top:0;
+}
+    #rightb{
+        overflow: hidden;
+        line-height: 0;
+    
+    }
+    #rightb::after{content: '>' ;
+        position: absolute;
+        right:0%;
+        display: flex;
+        justify-content: center;
+        height: 50px;
+        width: 50px;
+        font-size: 50px;
+        color: #666;
+     
+     
+            top:0;
+            line-height: 45px;
+    }
+.packhoverwrap{
+    margin-bottom: 20px;
+}
+    
+    .hoverbox1 a:first-child:hover{
+        background-position: -157px 0px;
+    }
+    .hoverbox1 a:nth-child(2):hover{
+        background-position: -209px 0px;
+    }
+    .hoverbox1 a:nth-child(3):hover{
+        background-position: -261px 0px;
+    }
+    .storemainwrapbox>ul li>div:hover .hoverbox1{
+        display: flex;
+    }
+    .storemainwrapbox h3,.storemainwrapbox p{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }

@@ -1,0 +1,980 @@
+#cgvWrap{
+    position: relative;
+}
+
+/*fixedBtn*/
+.fixedBtn{
+    position: fixed;
+    display: none;
+    right:50%;
+    bottom: 80px;
+    z-index:3;
+}
+    .btn_ticket{
+        width: 136px;
+        font-weight: 600;
+        padding: 17px 0;
+        font-size: 16px;
+        color:#ffff;
+        background-image: linear-gradient(to left, rgb(255, 115, 86), rgb(251, 67, 87));
+        box-shadow: 1px 3px 6px 0 rgba(0, 0, 0, 0.3);
+        border-radius: 25px;
+        text-align: center;
+        position: absolute;
+        right:-690%;
+        opacity: 1;
+    }
+    .btn_gotoTop{
+        width: 48px;
+        height: 48px;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        border: 1px solid #000;
+        box-shadow: 1px 3px 6px 0 rgba(0, 0, 0, 0.3);
+        border-radius: 50%;
+        margin-left:9px;
+        background: #ffff;
+        opacity: 1;
+        left:800%;
+    }
+    .btn_gotoTop img{
+        width: 15px;
+        height: 21px;
+        padding-top:14px;
+    }
+/*fixedNav*/
+.fixedNav {
+    width: 100%;
+    padding: 10px 0;
+    background-image: linear-gradient(to left, rgb(255, 115, 86), rgb(251, 67, 87));
+    display: none;
+    z-index:5;
+}
+    .fixedNav_wrap{
+        width: 980px;
+        height: 40px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .fixedNav h2 {
+        width: 71px;
+        height: 34px;
+    }
+    .fixedNav h2 img{
+        width: 100%;
+    }
+    .fixedNav .nav_menu li a{
+        color:#fff;
+    }
+    .fixedNav .sub_menu{
+        margin-top: 10px;
+    }
+    .fixedNav .sub_menu dt a{
+        font-weight: 700;
+        font-size: 14px;
+        color: #222;
+        line-height: 1.429em;
+    }
+    .fixedNav .sub_menu dd a{
+        font-weight: 400;
+        color: #666;
+        line-height:1.8em;
+    }
+.fixedbtn_search{
+    width: 40px;
+    height: 26px;
+    text-indent: -999em;
+    background: url(../img/search_w.png) center / 26px 26px no-repeat;
+    border: 0;
+    filter: brightness(0.5);
+}
+.search_wrap{
+    display: flex;
+    align-items: center;
+}
+.search_wrap fieldset{
+    border-right: 1px solid #cacaca;
+    height: 26px;
+    display: flex;
+}
+
+/*header*/    
+header{
+    position: relative;
+    z-index: 3;
+}
+ 
+/*header adTop*/ 
+.adTop{
+    background-color: #241A0E;
+    text-align: center;
+}
+.adTop_wrap{
+    position:relative;
+    width:980px;
+    height:80px;
+    margin: 0 auto;
+}
+    .btn_close{
+        position:absolute;
+        right:0px;
+        top:10px;
+    }
+/*header headerTop*/ 
+.headerTop{
+    width: 980px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 6px 25px 6px;
+}
+    .logo img{
+        width: 117px; 
+    }
+    .cultureplex{
+        font-weight: 300;
+        font-size: 16px;
+        color: #222;
+        letter-spacing: 0.313em;
+        line-height: 1.5em;
+    }
+/*header headerTop member*/ 
+    .member{
+        display: flex;
+        align-items: center;
+    }
+    .login_menu{
+        display: flex;        
+    }
+    .login_menu li{
+        margin-left:24px;        
+    }
+    .login_menu img{
+        display: block;
+        width: 36px;
+        height: 36px;
+        margin: 0 auto;
+    }
+    .login_menu a{
+        display: block;
+        font-size: 12px;
+        color: #666;
+        line-height: 1.462em;
+    }
+
+/*header nav*/ 
+nav{
+    position: relative;
+    border-top: 1px solid #ececec;
+    border-bottom: 2px solid #fb4357;
+}
+.nav_wrap{
+    width: 980px;
+    margin: 0 auto;
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;   
+}
+.nav_bg{
+    position: absolute;
+    width: 100%;
+    height:0px;
+    top: 52px;
+    left: 0;
+    background-color: #fff;
+    transition: all 0.8s;
+}
+.nav_menu{
+    position: relative;
+    display: inline-flex;
+}
+    .nav_menu li{
+        width:83px;
+        margin-right:20px;
+        line-height: 40px;
+    }
+    .nav_menu li a{
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.2em;
+    }
+    .nav_menu li a strong{
+        font-weight: 700;
+        color: #fb4357;
+    }
+    nav:hover .nav_bg, nav:hover .sub_menu{
+        height: 270px;
+    }
+    .sub_menu{
+        position:absolute;
+        padding-top:15px;
+        width: 100%;
+        height: 0;
+        transition: all 0.8s;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    
+    .sub_menu:not(.notthisone):after{
+        content: "";
+        position: absolute;
+        left: 130px;
+        top: 24px;
+        width: 1px;
+        height: 210px;
+        background: #e2e2e2;
+        transition: all 0.8s;
+    } 
+    .sub_menu dt a{ 
+        font-size: 14px;
+        font-weight: 700;
+        color: #222;
+    }
+    .sub_menu dd {
+        line-height:18px;        
+    }
+    .sub_menu dd a{
+        font-weight: 400;
+        font-size: 13px;
+        color: #666;
+        line-height: 2em;
+    }   
+.nav_menu > li:nth-child(1)> dl {
+    left:0px;
+}    
+.nav_menu > li:nth-child(2) > dl {
+    left:163px;
+}
+.nav_menu > li:nth-child(3) > dl {
+    left:326px;
+}    
+.nav_menu > li:nth-child(4) > dl {
+    left:489px;
+}
+.nav_menu > li:nth-child(5) > dl {
+    left:652px;
+}
+.nav_menu > li:nth-child(6) > dl {
+    left:815px;
+}
+/* .nav_menu>li:nth-child(6)>dl::after {
+    width: 0;
+} */
+
+
+/*header nav search_wrap*/ 
+.search_wrap{
+    line-height: 40px;
+}
+    input{
+        width: 160px;
+        padding: 0 0 0 7px;
+        font-size: 16px;
+        color:#666;
+        font-weight: 600;
+        line-height:1.6em;
+        border:0;
+        border-left: 1px solid #cacaca;
+        background: transparent;
+    }
+    .btn_search{
+        width: 40px;
+        height: 26px;
+        text-indent:-999em;
+        background: url(../img/search_w.png) center / 26px 26px no-repeat;
+        border: 0 ;
+        filter: brightness(0.5);
+        border-right: 1px solid #cacaca;
+    }
+
+/*main */
+main{   
+    width: 980px;
+    margin: 0 auto;
+}
+/*main -section-favorite */
+.favorite{
+    padding: 65px 53px 0;
+    height: 450px;
+    background: url('../img/sub/theater/bg_showtimes_favorite.gif')  center no-repeat;
+    background-size:contain;
+    box-sizing: border-box;
+    color: #dbdbdb;
+}
+.favorite_tit{
+    display: flex;
+    justify-content: space-between;    
+}
+.favorite_tit h3{
+    width: 150px;
+    margin-left:20px;
+    text-indent: -999em;
+    background: url('../img/sub/theater/favorite_cgv.png') center no-repeat;
+}
+.favorite_theater{
+    display: flex;
+    margin-left:28px;
+}
+.favorite_theater li{
+    width: 114px;
+    height: 41px;
+    border: 2px solid #6e6c6d;
+    margin-left:3px;
+}
+.favorite_theater li a{
+    position: relative;
+    display: block;
+    width: 108px;
+    height:35px;
+    border: 1px solid #6e6c6d;
+    line-height: 39px;
+    margin:2px;
+}
+.favorite_theater li em{
+    /* position: absolute;  */
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    box-sizing: border-box;
+    font-size:12px;  
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* top:-12px;
+    right:2px; */
+}
+.more{
+    margin-right:20px;
+}
+.city{
+    border-top: 2px solid #727171;
+    border-bottom: 2px solid #727171;
+    margin-top:15px;
+    position: relative;
+
+}
+.city_tit{
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+.city_tit > li{
+    font-size: 14px;
+    line-height: 42px;
+    padding: 0 19px;
+}
+.city_tit > li:hover{
+    color:#fff;
+}
+.area{
+    display: none;
+}
+.area ul{
+    width: 854px;
+    display: flex;
+    flex-flow: row wrap;
+    position: absolute;
+    left: 10px;
+    top:60px
+}
+.area li{
+
+    font-size: 11px;
+    color: #b9b9b9;
+    line-height: 31px;
+    font-weight: 600;
+    padding-right: 10px;
+}
+.area li::after{
+    content: '│';
+    margin-left: 10px;
+}
+
+
+/*main -section-theater */
+.theater{
+
+}
+.tit{
+    background: url('../img/sub/theater/bg_h3_line.jpg') repeat-x 0 50%;
+    height: 41px;
+    margin: 30px 0 15px;
+    line-height: 41px;
+    text-align: center;
+}
+    .theater_sect{
+
+    }
+    .theater_tit{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom:10px;
+    }
+    h4{
+        color: #333333;
+        font-size: 29px;
+        font-weight: 500;
+    }
+    .tab_inquiry{
+        padding: 0 14px;
+        color:#ffff;
+        background: #fb4357;
+        line-height: 29px;
+        font-size:12px;
+    }
+    .theater_img{
+        position: relative;
+    }
+    .theater_txt{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 920px;
+        padding: 20px 30px;
+        background: rgba(0, 0, 0, 0.8);
+        color: #fdfcf0;
+        font-size: 12px;
+        font-weight:600;
+        display: flex;
+    }
+    .theater_info{
+        line-height: 1.1rem;
+        margin-right: 80px;
+    }
+    .screentype{
+        text-indent: -999em;
+        margin-right:100px;
+        display: inline-block;
+        width: 82px;
+        height: 17px;
+        background: url("../img/sub/arthouse/sprite_screentype02.png") -99px -162px ;
+    }
+    .notice{
+        float: right;
+        width: 280px;
+        height: 98px;
+        padding: 10px 0 0 30px;
+        border-left: 1px solid rgba(255,255,255,0.2);
+    }
+    .link_more{
+        display: inline-block;
+        width:20px;
+        height:20px;
+        margin-left: 10px;
+        background: url('../img/sub/theater/sprite_btn.png') -50px -62px no-repeat;
+    }
+        
+/*main -section-ad */
+.ad{
+    margin: 20px 0 30px 0;
+}
+/*main -section-tab_menu */
+.tab_menu{
+    width:200px;
+    height: 39px;
+    margin: 0 auto;
+    background: #fb4357;
+    color:#fff;
+    line-height: 39px;
+    display: flex;
+    padding: 0 13px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+}
+.tab_menu li:last-child::before{
+    content: "│";
+}
+
+/*main -section-schedule */
+.schedule{
+    margin-top:50px;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+.timetable{
+    width: 800px;
+    border-top: 3px solid #241d1e;
+    position: relative;
+}
+.date{
+    position: relative;
+    padding: 12px 0 8px 0;
+    height: 106px;
+    box-sizing: border-box;
+}
+.date_list{
+    display: flex;
+    justify-content: space-between;
+}
+.btn{
+    width: 51px;
+    height: 19px;
+}
+.day{
+    display: flex;
+    justify-content: space-between;
+    gap:8px;
+    font-size: 12px;
+}
+.day > li{
+    width:74px;
+    height: 48px;
+}
+.day_list{
+    display: flex;
+    justify-content: space-between;
+    padding:3px;
+    border: 2px solid transparent;
+    color: #666;
+}
+.day_list.on{
+    color:#000;
+    border: 2px solid #000;
+    border-radius:5px;
+}
+.day span{
+    margin-top: 3px;
+    text-align: center;
+    line-height: 0.9rem;
+}
+.day strong{
+    font-size: 32px;
+    font-weight:500;
+}
+.desc{
+    position:absolute;
+    right:0;
+    bottom:10px;
+    display: flex;
+}
+.desc li{
+    background: url("../img/sub/theater/sprite_icon.png");
+    font-size:13px;
+    background-position: 0 -158px;
+    padding-left:20px;
+    margin-right:10px;
+    font-weight: 600;
+}
+    .btn{
+        margin-top: 10px;
+    }
+    .btn_prev{
+        background: url("../img/sub/theater/sprite_btn.png");
+        background-position:-117px -174px;
+    }   
+    .btn_next{
+        background: url("../img/sub/theater/sprite_btn.png");
+        background-position: -117px -155px;
+    }   
+
+.grade_popup{
+    position: absolute;
+    top:110px;
+    right:20px;
+    margin-top: 5px;
+    background-color: #f6f6f4;
+    color: #333;
+    border: 5px solid #333;
+    z-index:8;
+    display: none;
+}    
+    .grade_tit{
+        padding:13px;
+        background-color: #333;
+        color: #f2f0e5;
+        font-weight: 600;
+        border: 1px solid #f2f0e5;
+        font-size: 22px;
+        padding-left: 14px;
+    }
+    h5{
+        display: flex;
+        justify-content: space-between;
+    }
+    .grade_close{
+        width: 18px;
+        height: 20px;
+        display: inline-block;
+        text-indent: -999em;
+        background: url("../img/sub/theater/sprite_btn.png") no-repeat -72px -62px;
+    }
+    .grade_txt{
+        padding: 35px 40px 40px 40px; 
+        font-size: 12px;
+        line-height: 1.3em;
+        text-align: left;
+        border-top: 5px solid #333;
+    }
+    thead th{
+        padding: 7px 0 5px 10px;
+        background-color: #e2e2e0;
+        font-size: 11px;
+    }
+    tbody th{
+        font-weight: 800;
+        margin-left: 14px;
+        vertical-align: middle;
+        padding: 14px 30px 14px 10px;
+    }
+    tbody th img{
+        margin-right:6px;
+        vertical-align: middle;
+    }
+    tr{
+        border-bottom: 1px solid #d6d6cc;
+    }
+    td{
+        vertical-align: middle;
+        color: #666;
+        padding: 14px 30px 14px 10px;
+        border-left: 1px solid #d6d6cc;
+        line-height: 1.5em;
+        
+    }
+.timezone{
+    display: flex;
+    height: 37px;
+    line-height: 37px;
+    padding: 0 0 0 11px;
+    border-top: 2px solid #474746;
+    border-bottom: 1px solid #474746;
+    font-size: 12px;
+    /* position: relative; */
+
+}
+    .timezone p{
+        margin-left: 10px;
+        color: #794624;
+    }
+.time{
+    display: flex;
+    margin: 5px 0;
+}
+.time li{
+    width:50px;
+    line-height:24px;
+}
+    .morning{
+        background: url("../img/sub/theater/sprite_icon.png") no-repeat;
+        background-position: 0 -175px;
+        padding-left:20px;
+    }
+    .night{
+        background: url("../img/sub//theater/sprite_icon.png") no-repeat;
+        background-position: 6px -193px;
+        padding-left: 20px;
+    }
+
+.minimap_area{
+    position: absolute;
+    background-color: #fff;
+    border: 3px solid #000;
+    font-size: 11px;
+    z-index: 5;
+    text-align: center;
+    display: none;
+    top:0;
+}   
+   .arr{
+        position: absolute;
+        left: 50%;
+        margin-left: -7px;
+        bottom: -13px;
+        width: 15px;
+        height: 13px;
+        background:url(../img/sub/theater/bg_arrow04.png) no-repeat;
+   }
+   .data_txt{
+        padding:2px 15px 5px 15px;
+        font-size:11px;
+        font-weight:800;
+   }
+   .txt1{
+        padding: 3px;
+   }
+   .txt2{
+        color:#727171;
+   }
+   .map_area{
+        text-align: center;
+        border-top:1px solid #888;
+        border-bottom:1px solid #888;
+        padding:3px 0 16px 0;
+   }
+   .screen{
+        text-decoration:underline;
+        margin-bottom: 5px;
+        color: #9e9e9e;
+   }
+   .theater_time{
+        font-weight:600;
+        padding: 5px;
+   }
+   .wrapboxinf{
+    position: relative;
+    height: 1520px;
+   }
+.info{
+    line-height: 1.3em;
+      position: absolute;
+display :none;
+}  
+.info > li{
+    border-bottom: 1px solid #181815;
+}
+.info_movie{
+  
+    padding: 40px 0;
+} 
+.movienamewrap{
+    display:flex; gap: 10px;
+
+}
+    .movieName{
+        /* position: absolute; */
+        /* top:40px;
+        left:28px;   */
+        font-size:16px;
+        color: #333333;
+        font-weight: 600;
+    }
+    .onair{
+        border: 2px solid #3e82a4;
+        color: #3e82a4;
+        font-weight: 600;
+        font-size: 13px;
+        box-sizing: border-box;
+        padding: 0 5px 0;
+        line-height: 16px;
+    }
+    .movieDesc{
+        line-height: 1.2;
+        color: #666;
+        font-size:12px;
+        font-weight:300;
+    }
+    .movieAge{
+        width: 20px;
+        height: 20px;
+    }
+    .parking{
+        margin-left:5px;
+        color: #b1b1ab;
+        font-size: 9px;
+        font-weight:400;
+    }
+    .info_hall{
+        display: flex;
+        margin:13px 0  5px 0; 
+    }
+    .info_hall li{
+        color: #333;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 17px;
+        padding: 0 4px;
+    }
+.info_hall > li:nth-child(1){
+    background: url("../img/sub/theater/ico_arrow03.png") center left no-repeat;
+    padding-left: 9px;
+}
+ .info_screen{
+    border-top: 2px solid #474746;
+    padding: 15px 0 100px 0;
+    color: #666;
+    font-size:0.9em;
+ }   
+ .info_time{
+    display: flex;
+ }
+ .info_time > li{
+    border: 1px solid #cbcabe;
+    margin-right: -1px;
+    width: 70px;
+    height:45px;
+    padding:3px 0;
+    box-sizing: border-box;
+    text-align: center;
+ }
+ .info_time em{
+    line-height:0.3em;
+    font-size: 14px;
+    font-weight: bold;
+ }
+ .seat{
+    display: block;
+    color: #2275a4;
+    font-size: 13px;
+    line-height: 0.8em;
+ }
+ .seat:before{
+    content: "";
+    display: block;
+    background: url("../img/sub/theater/sprite_icon.png");
+ }
+ .txt_info{
+    margin-top: 20px;
+ }
+ .txt_info em{
+    display: block;
+ }
+
+
+.adbox{
+    width: 160px;
+}
+.adbox img:nth-child(1){
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+/*footer*/
+footer{
+    background-color: #f8f8f8;
+    font-size: 13px;
+
+}
+.footer_ad{
+    background-color: #000000;
+    background-image: url(https://adimg.cgv.co.kr/images/bg_temp_foot_banner2021.gif);
+    background-repeat: repeat-x;
+    margin: 0 auto;
+    text-align: center;
+}
+.footer_wrap{
+    width: 980px;
+    margin: 0 auto;
+}
+.footer_info_wrap{
+    display: flex;
+    justify-content: space-between;
+}
+/*footer policy*/
+.policy{
+    padding: 23px 0;
+    border-bottom: 1px solid #ebebeb;
+}
+.policy_list{
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+}
+.policy_list li a{
+    font-weight: 550;
+    color: #666;
+    line-height: 1.462em;
+}
+.policy_list li a:hover{
+    text-decoration: underline;
+}
+.policy_list li a strong {
+    font-weight: 700;
+    color: #222;
+    text-decoration: underline;
+}
+/*footer company*/
+.company{
+    color: #666;
+    padding: 23px 0;
+    font-size: 12px;
+}
+address{
+    color: #666;
+    line-height:20px;
+}
+.company_list{
+    display: flex;
+    color: #666;
+    line-height: 1.667em;
+}
+.company_list{
+    display: flex;
+    color: #666;
+    line-height: 1.667em;
+}
+.company_list .btn_goFtc{
+    color: #666;
+    text-decoration: underline;
+}
+.company_list dt:after {
+    content: ':';
+    padding: 0 4px;
+}
+.company_list dt ~ dt:before { /*dt 뒤에 있는 모든 태그를 선택합니다*/
+    content: '·';
+    padding: 0 8px 0 4px;
+}
+.copyright{
+    color: #666;
+    line-height:20px;
+}
+/*footer familysite*/
+.familysite{
+    width: 213px;
+    display: flex;
+    justify-content:space-between;
+    padding-top:60px;
+}
+.familysite_wrap{
+    position: relative;
+}
+.familysite_wrap h3{
+    width: 162px;
+    line-height: 34px;
+    color:#666;
+    padding-left: 10px;
+    border: 1px solid #d8d8d8;
+    background: #fff;
+}
+.familysite_wrap h3 a{
+    display: block;
+    width: 100%;
+    background: url(../img/arrow_D.png) 146px no-repeat;
+}
+.familysite_list{
+    position: relative;
+    z-index: 5;
+}
+.familysite_wrap dl{
+    position: absolute;
+    bottom: 65px;
+    width: 172px;
+    font-size:11px;
+    line-height:2em;
+    background: #fff;
+    color: #666;
+    border: 1px solid #d8d8d8;
+    box-shadow: 5px 0px 20px 0px #e4e4e4;
+    display: none;
+}
+.familysite_wrap dt{
+    font-weight:600;
+    line-height:2em;
+}
+.familysite_wrap dd{
+    padding-left: 15px;
+}
+.familysite_wrap dd:hover{
+    background:#666;
+    color:#fff;
+}
+.go{
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    margin-left: -1px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 34px;
+    background-color: #9e9e9e;
+}
