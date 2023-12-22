@@ -9,6 +9,9 @@ window.onload= function(){
         gettext = find.split(splitdot)
         getsrc =  `../${window.localStorage.getItem('src')}`
     };
+    document.querySelectorAll('a[href=""]').forEach(function(item){
+        item.setAttribute('href','#none')
+     })
     getlocalsave()
     console.log(gettext,getsrc)
     let mainmenus = window.localStorage.getItem('part')
@@ -112,13 +115,12 @@ window.onload= function(){
     }
 
 
-        //푸터
     document.querySelector('.familysite_wrap h3').onclick = function(){
         document.querySelector('.familysite_list').style.display =  document.querySelector('.familysite_list').style.display =='none'? 'block' : 'none'
     }
     let windowYscroll=''
+    let fixnav = document.querySelector('.fixedNav')
     window.onscroll = function(){
-        let fixnav = document.querySelector('.fixedNav')
         let footertopbtn = document.querySelector('.fixedBtn')
         windowYscroll=window.pageYOffset;
         if(document.querySelector('.adTop').style.display!='none' && windowYscroll > 250){
@@ -133,6 +135,20 @@ window.onload= function(){
             fixnav.style.display = 'none'
             fixnav.style.position = 'fixed'
             footertopbtn.style.display = 'none'
+        }
+    }
+    let fixsub = document.querySelectorAll('.fixedNav_wrap .sub_menu,.fixedNav_wrap .nav_bg')
+    document.querySelectorAll('.fixedNav_wrap .sub_menu,.fixedNav_wrap .nav_bg')[0].style.top='60px'
+
+    fixnav.onmouseenter = function(){
+        for(let x of fixsub){
+            x.style='height:270px'
+        } document.querySelectorAll('.fixedNav_wrap .sub_menu,.fixedNav_wrap .nav_bg')[0].style.top='60px'
+    }
+    fixnav.onmouseleave=function(){
+        for(let x of fixsub){
+            x.style='height:0px'
+            document.querySelectorAll('.fixedNav_wrap .sub_menu,.fixedNav_wrap .nav_bg')[0].style.top='60px'
         }
     }
 

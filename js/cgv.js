@@ -177,8 +177,8 @@ window.onload =function(){
         document.querySelector('.familysite_list').style.display =  document.querySelector('.familysite_list').style.display =='none'? 'block' : 'none'
     }
     let windowYscroll=''
+    let fixnav = document.querySelector('.fixedNav')
     window.onscroll = function(){
-        let fixnav = document.querySelector('.fixedNav')
         let footertopbtn = document.querySelector('.fixedBtn')
         windowYscroll=window.pageYOffset;
         if(document.querySelector('.adTop').style.display!='none' && windowYscroll > 250){
@@ -193,6 +193,20 @@ window.onload =function(){
             fixnav.style.display = 'none'
             fixnav.style.position = 'fixed'
             footertopbtn.style.display = 'none'
+        }
+    }
+    let fixsub = document.querySelectorAll('.fixedNav_wrap .sub_menu,.fixedNav_wrap .nav_bg')
+    document.querySelectorAll('.fixedNav_wrap .sub_menu,.fixedNav_wrap .nav_bg')[0].style.top='60px'
+
+    fixnav.onmouseenter = function(){
+        for(let x of fixsub){
+            x.style='height:270px'
+        } document.querySelectorAll('.fixedNav_wrap .sub_menu,.fixedNav_wrap .nav_bg')[0].style.top='60px'
+    }
+    fixnav.onmouseleave=function(){
+        for(let x of fixsub){
+            x.style='height:0px'
+            document.querySelectorAll('.fixedNav_wrap .sub_menu,.fixedNav_wrap .nav_bg')[0].style.top='60px'
         }
     }
   // 로컬에 자료저장해야함 .giftcon 태그 속에 무언갈 클릭했을때
@@ -235,5 +249,7 @@ window.onload =function(){
         
     }
   }
-     
+     document.querySelectorAll('a[href=""]').forEach(function(item){
+        item.setAttribute('href','#none')
+     })
 }

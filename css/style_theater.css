@@ -1,4 +1,5 @@
 #cgvWrap{
+    overflow: hidden;
     position: relative;
 }
 
@@ -292,6 +293,7 @@ nav{
 
 /*main */
 main{   
+    padding-top: 30px;
     width: 980px;
     margin: 0 auto;
 }
@@ -724,8 +726,10 @@ main{
       position: absolute;
 display :none;
 }  
-.info > li{
+.info > li:not(:last-child){
+    width: 800px;
     border-bottom: 1px solid #181815;
+
 }
 .info_movie{
   

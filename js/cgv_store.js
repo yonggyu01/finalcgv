@@ -5,9 +5,12 @@ document.querySelector('.familysite_wrap h3').onclick = function(){
 }
 
 //스크롤
+document.querySelector('.familysite_wrap h3').onclick = function(){
+    document.querySelector('.familysite_list').style.display =  document.querySelector('.familysite_list').style.display =='none'? 'block' : 'none'
+}
 let windowYscroll=''
+let fixnav = document.querySelector('.fixedNav')
 window.onscroll = function(){
-    let fixnav = document.querySelector('.fixedNav')
     let footertopbtn = document.querySelector('.fixedBtn')
     windowYscroll=window.pageYOffset;
     if(document.querySelector('.adTop').style.display!='none' && windowYscroll > 250){
@@ -24,8 +27,24 @@ window.onscroll = function(){
         footertopbtn.style.display = 'none'
     }
 }
-// 헤더
+let fixsub = document.querySelectorAll('.fixedNav_wrap .sub_menu,.fixedNav_wrap .nav_bg')
+document.querySelectorAll('.fixedNav_wrap .sub_menu,.fixedNav_wrap .nav_bg')[0].style.top='60px'
 
+fixnav.onmouseenter = function(){
+    for(let x of fixsub){
+        x.style='height:270px'
+    } document.querySelectorAll('.fixedNav_wrap .sub_menu,.fixedNav_wrap .nav_bg')[0].style.top='60px'
+}
+fixnav.onmouseleave=function(){
+    for(let x of fixsub){
+        x.style='height:0px'
+        document.querySelectorAll('.fixedNav_wrap .sub_menu,.fixedNav_wrap .nav_bg')[0].style.top='60px'
+    }
+}
+// 헤더
+document.querySelectorAll('a[href=""]').forEach(function(item){
+    item.setAttribute('href','#none')
+ })
 // store detail화면으로 가기위한  저장용 스크립트
     document.querySelector('.storemainwrapbox').onclick =function(e){
         let title,price,urlsrc,targetselect, urlresult,part;

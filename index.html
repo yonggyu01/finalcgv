@@ -10,14 +10,28 @@
     </script>
 </head>
 <body>
+    <!-- 수정요청사항 fixed nav  nav 속도 0.4정도로 조정  index는 해놨음  
+        store detail 페이지 버튼들 a태그로 교체
+        무비차트 페이지 글자 간격 및 예매하기 버튼 색상 교체
+        예매하기 밑으로 여백좀 증가시켜주고
+        예매율 칸에 있는 글자 크기좀 조절
+        스토어 페이지 
+        3줄로 되어있는거 하나 더만들던지
+        아니면 3개를 한화면에 보이게 변경
+        스토어 개별메뉴에서 각 메뉴마다 테두리 같은게 좀 있으면 좋겠다 하심
+        
+
+    -->
     <div id="cgvWrap">
         <div class="fixedBtn">
             <a href="html/CGV_schedule.html" class="btn_ticket">예매하기</a>
-            <a href="" class="btn_gotoTop"><img src="img/gotoTop.png" alt=""></a>
+            <a href="#none" class="btn_gotoTop"><img src="img/gotoTop.png" alt=""></a>
         </div>    
 
         <div class="fixedNav">
             <div class="fixedNav_wrap">
+                <div class="nav_bg">
+                </div>
                 <h2><a href="index.html"><img src="img/logoWhite.png" alt=""></a></h2>
                 <ul class="nav_menu">
                     <li>
@@ -40,13 +54,15 @@
                     <li>
                         <a href="html/CGV_schedule.html">예매</a>
                         <dl class="sub_menu"> 
-                            <dt><a href="html/CGV_schedule.html">상영스케줄</a></dt>
+                            <dt><a href="html/CGV_schedule.html">예매</a></dt>
+                            <dd><a href="html/CGV_schedule.html">상영스케줄</a></dd>
                         </dl>
                     </li>
                     <li>
                         <a href="html/CGV_store.html">스토어</a>
                         <dl class="sub_menu"> 
-                            <dt><a href="html/CGV_store_pack.html">패키지</a></dt>
+                            <dt><a href="html/CGV_store.html">스토어</a></dt>
+                            <dd><a href="html/CGV_store_pack.html">패키지</a></dd>
                             <dd><a href="html/CGV_store_movieticket.html">영화관람권</a></dd>
                             <dd><a href="html/CGV_store_gift.html">기프트카드</a></dd>
                             <dd><a href="html/CGV_store_combo.html">콤보</a></dd>
@@ -57,13 +73,14 @@
                     <li>
                         <a href="html/CGV_event.html">이벤트</a>
                         <dl class="sub_menu"> 
-                            <dt><a href="html/CGV_event.html">카드뒤집기</a></dt>
+                            <dt><a href="html/CGV_event.html">이벤트</a></dt>
+                            <dd><a href="html/CGV_event.html">카드뒤집기</a></dd>
    
                         </dl>
                     </li>
                     <li>
                         <a href="html/CGV_sale.html">혜택</a>
-                        <dl class="sub_menu"> 
+                        <dl class="sub_menu notthisone"> 
                             <dt><a href="html/CGV_sale.html">혜택</a></dt>
                             <dd><a href="html/CGV_sale.html">CGV 할인정보</a></dd>
                         </dl>
@@ -108,10 +125,10 @@
                         <a href="#none"><img src="img/top_small_banner.png" alt=""></a>
                     </div>
                     <ul class=login_menu>
-                        <li><a href=""><img src="img/loginPassword.png" alt="">로그인</a></li>
-                        <li><a href=""><img src="img/loginJoin.png" alt="">회원가입</a></li>
-                        <li><a href=""><img src="img/loginMember.png" alt="">MY CGV</a></li>
-                        <li><a href=""><img src="img/loginCustomer.png" alt="">고객센터</a></li>
+                        <li><a href="#none"><img src="img/loginPassword.png" alt="">로그인</a></li>
+                        <li><a href="#none"><img src="img/loginJoin.png" alt="">회원가입</a></li>
+                        <li><a href="#none"><img src="img/loginMember.png" alt="">MY CGV</a></li>
+                        <li><a href="#none"><img src="img/loginCustomer.png" alt="">고객센터</a></li>
                     </ul>
                 </div>
             </div>
@@ -230,7 +247,7 @@
                             <li>
                                 <div class="detailView">
                                     <a href="html/cgv_movie_cart.html" class="detail">상세보기</a>
-                                    <a href="" class="ticket">예매하기</a>
+                                    <a href="#none" class="ticket">예매하기</a>
                                 </div>
 
                                 <a href="#none">

@@ -1,5 +1,6 @@
 #cgvWrap{
     position: relative;
+    overflow: hidden;
 }
 
 /*fixedBtn*/
@@ -184,8 +185,8 @@ nav{
     height:0px;
     top: 52px;
     left: 0;
-    background-color: #fff;
-    transition: all 0.8s;
+    background-color: #ffffff;
+    transition: all 0.4s;
 }
 .nav_menu{
     position: relative;
@@ -214,7 +215,7 @@ nav{
         padding-top:15px;
         width: 100%;
         height: 0;
-        transition: all 0.8s;
+        transition: all     0.4s;
         overflow: hidden;
         box-sizing: border-box;
     }
@@ -227,7 +228,8 @@ nav{
         width: 1px;
         height: 210px;
         background: #e2e2e2;
-        transition: all 0.8s;
+        transition: all 0.4s;
+        overflow: hidden;
     } 
     .sub_menu dt a{ 
         font-size: 14px;
