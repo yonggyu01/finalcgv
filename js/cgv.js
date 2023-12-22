@@ -9,9 +9,7 @@ window.onload =function(){
         let slider = document.querySelector('.chart_wrap .slide_list'),//
         sliderli2 =document.querySelector('.chart2_wrap .slide_list li').getBoundingClientRect().width,//
         sliderli =document.querySelector('.chart_wrap .slide_list li').getBoundingClientRect().width,//
-        eventslide =document.querySelector('.event_list'),//
-        slider2 = document.querySelector('.chart2_wrap .slide_list'),//
-        eventli =document.querySelector('.event_list li').getBoundingClientRect().width,//      
+        slider2 = document.querySelector('.chart2_wrap .slide_list'),//      
         idchecker = e.target.id || e.target.classList.value;
         // console.log(idchecker)
         switch (idchecker){
@@ -74,72 +72,85 @@ window.onload =function(){
                 }
                     e.target.previousElementSibling.style.display ='block'
                 break;
-            case 'eventprevb':  //이벤트 버튼  gap 24px임
-            if(eventnum==(eventli +24)*-1){
-                e.target.style.display = 'none'
-                eventnum = eventnum +eventli +24
-                eventslide.style.transform = `translate(${eventnum}px)`
-            }else{
-                eventnum = eventnum +eventli +24
-                eventslide.style.transform = `translate(${eventnum}px)`
-            }
-                e.target.nextElementSibling.style.display ='block'
-                break;
-            case 'eventnextb' :
-                if(eventnum==(((eventli+24)*-1)*2)){
-                    eventnum = eventnum -eventli-24
-                    eventslide.style.transform = `translate(${eventnum}px)`
-                    e.target.style.display = 'none'
-                }else{
-                    eventnum = eventnum -eventli-24
-                    eventslide.style.transform = `translate(${eventnum}px)`
-                }
-                e.target.previousElementSibling.style.display ='block'
-                break;
-                case 'btn_eventControl': //event auto play버튼 처음 브라우저 시작시 플레이 상태임  클릭시 사진 전환필요함
-                automode++
-                e.preventDefault();
-                // 0일때는 스탑임 하자
-                e.target.style.backgroundImage = automode%2 > 0 ?   `url(img/stop.png)` : `url(img/play_d.png)`
-                if(automode%2 > 0){ // 플레이시 할일
-                    autotimer =  setInterval(() => {
-                        //  if와 else로  구성해서  중간에 정지버튼 클릭시 버그 발생가능성 높음
-                         if(eventtime != 0){
-                             if(eventnum==(eventli +24)*-1){
-                                 document.querySelector('#eventnextb').previousElementSibling.style.display = 'none'
-                                 eventnum = eventnum +eventli +24
-                                 eventslide.style.transform = `translate(${eventnum}px)`
-                                 eventtime = 0
- 
-                             }else{
-                                 eventnum = eventnum +eventli +24
-                                 eventslide.style.transform = `translate(${eventnum}px)`
-                                 document.querySelector('#eventnextb').style.display ='block'
-                             }
-                         }else{
-                             if(eventnum==(((eventli+24)*-1)*2)){
-                                 eventnum = eventnum -eventli-24
-                                 eventslide.style.transform = `translate(${eventnum}px)`
-                                 document.querySelector('#eventnextb').style.display = 'none'
-                                 eventtime = 1 
-                             }else{
-                                 eventnum = eventnum -eventli-24
-                                 eventslide.style.transform = `translate(${eventnum}px)`
-                             }
-                             document.querySelector('#eventnextb').previousElementSibling.style.display ='block'
-                         }
-                     }, 5000) // 버그 가능성이 있으니 추가수정 한번 할것임
-                }else{ // 스탑시
-                    clearInterval(autotimer)
-                    eventtime = 0;
-                    }
-                    
-                        // 추가로 수정 방향은 -> 이벤트 부분은 이렇게 id체커로  이벤트를 직접 주는게 아니라 
-                        //이벤트 리스너로 이벤트를 직접 해당태그에 등록하고 오토플레이시 변수.dispatchEvent(new Event('click'))
-                        //이런식으로 구동시켜도 될것같음
-                break;
+        default :
+        '';
         }
     }
+    let autoevent =  document.querySelector('.btn_eventControl'),eventnextb=document.querySelector('.event .slide_btn_next'),eventprevb=document.querySelector('.event .slide_btn_prev');
+    let eventslide =document.querySelector('.event_list'),eventli =document.querySelector('.event_list li').getBoundingClientRect().width;
+    eventnextb.onclick=function(e){
+        clearInterval(autotimer)
+      
+        autoevent.style.backgroundImage = `url(img/play_d.png)`
+        automode = 0
+            if(eventnum==(((eventli+24)*-1)*2)){
+                eventnum = eventnum -eventli-24
+                eventslide.style.transform = `translate(${eventnum}px)`
+                e.target.style.display = 'none'
+                eventtime = 1;
+            }else{
+                eventnum = eventnum -eventli-24
+                eventslide.style.transform = `translate(${eventnum}px)`
+            }
+            e.target.previousElementSibling.style.display ='block'
+    }
+    eventprevb.onclick=function(e){
+        clearInterval(autotimer)
+        
+        autoevent.style.backgroundImage = `url(img/play_d.png)`
+        automode = 0
+        if(eventnum==(eventli +24)*-1){
+            e.target.style.display = 'none'
+            eventnum = eventnum +eventli +24
+            eventslide.style.transform = `translate(${eventnum}px)`
+            eventtime = 0;
+        }else{
+            eventnum = eventnum +eventli +24
+            eventslide.style.transform = `translate(${eventnum}px)`
+
+        }
+            e.target.nextElementSibling.style.display ='block'
+    }
+    autoevent.onclick=function(e){
+        automode++
+        e.preventDefault();
+        // 0일때는 스탑임 하자
+        e.target.style.backgroundImage = automode%2 > 0 ?   `url(img/stop.png)` : `url(img/play_d.png)`
+        if(automode%2 > 0){ // 플레이시 할일
+            autotimer =  setInterval(() => {
+                //  if와 else로  구성해서  중간에 정지버튼 클릭시 버그 발생가능성 높음
+                 if(eventtime != 0){
+                     if(eventnum==(eventli +24)*-1){
+                        eventnextb.previousElementSibling.style.display = 'none'
+                         eventnum = eventnum +eventli +24
+                         eventslide.style.transform = `translate(${eventnum}px)`
+                         eventtime = 0
+
+                     }else{
+                         eventnum = eventnum +eventli +24
+                         eventslide.style.transform = `translate(${eventnum}px)`
+                         eventnextb.style.display ='block'
+                     }
+                 }else{
+                     if(eventnum==(((eventli+24)*-1)*2)){
+                         eventnum = eventnum -eventli-24
+                         eventslide.style.transform = `translate(${eventnum}px)`
+                         eventnextb.style.display = 'none'
+                         eventtime = 1 
+                     }else{
+                         eventnum = eventnum -eventli-24
+                         eventslide.style.transform = `translate(${eventnum}px)`
+                     }
+                     eventnextb.previousElementSibling.style.display ='block'
+                 }
+             }, 5000) // 버그 가능성이 있으니 추가수정 한번 할것임
+        }else{ // 스탑시
+            clearInterval(autotimer)
+            eventtime = 0;
+            }
+    }
+
+
     //이벤트 리스트 마우스 호버효과
     let eventHall = document.querySelectorAll('.specialHall_list li')
     eventHall.forEach(function(item,idx){
