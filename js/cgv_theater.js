@@ -193,6 +193,13 @@ document.querySelectorAll('.day>li').forEach(function(item,idx){
         }
     }
     // 헤더
-
+    let btn_gotoTop= document.querySelector('.btn_gotoTop')
+    btn_gotoTop.onclick =function(){
+        window.scrollTo({top : 0,behavior:'smooth'})
+    }
+    let btn_close = document.querySelector('.btn_close')
+    btn_close.onclick=function(e){
+        e.target.parentElement.parentElement.parentElement.style.display='none'
+    }
 
 }
