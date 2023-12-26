@@ -13,7 +13,7 @@ window.onload= function(){
         item.setAttribute('href','#none')
      })
     getlocalsave()
-    console.log(gettext,getsrc)
+    // console.log(gettext,getsrc)
     let mainmenus = window.localStorage.getItem('part')
     let changetitle = document.querySelector('#changetitle')
     let changeimg=document.querySelector('#changeimg')
@@ -30,7 +30,7 @@ window.onload= function(){
     total_result.innerHTML = price.innerHTML
     let resultview = Number(document.querySelector('.result a').innerHTML)
     document.querySelector('.clacul').onclick=function(e){
-        let selector = e.target.id || e.target.classList.value
+        let selector = e.target.parentElement.classList.value || e.target.classList.value
         console.log(resultview)
         switch (selector){
             case 'minus':
@@ -94,14 +94,14 @@ window.onload= function(){
     window.onclick = function(e){
         let packslideli = document.querySelector('.storemainwrapbox li').getBoundingClientRect().width    
         let idchecker = e.target.id || e.target.classList.value;
-        console.log(leftnum)
+        // console.log(leftnum)
 
         switch (idchecker){
             case 'btn_close' :
                 document.querySelector('.adTop').style.display = 'none'
             break;
             case 'rightb' :
-                console.log(leftnum)
+                // console.log(leftnum)
                 leftnum -= (packslideli-30) 
                 document.querySelector('.storemainwrapbox ul').style.transform = `translateX(${leftnum}px)`
             break;
