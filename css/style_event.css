@@ -84,6 +84,9 @@
         color: #666;
         line-height:1.8em;
     }
+    .fixedNav .fixedbtn_search{
+        filter: brightness(1);
+    }
 .fixedbtn_search{
     width: 40px;
     height: 26px;
@@ -185,8 +188,9 @@ nav{
     height:0px;
     top: 52px;
     left: 0;
-    background-color: #fff;
-    transition: all 0.8s;
+    transition: all 0.4s;
+    background: rgb(238,238,238);
+    background: linear-gradient(0deg, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 15%);
 }
 .nav_menu{
     position: relative;
@@ -215,7 +219,7 @@ nav{
         padding-top:15px;
         width: 100%;
         height: 0;
-        transition: all 0.8s;
+        transition: all 0.4s;
         overflow: hidden;
         box-sizing: border-box;
     }
@@ -228,7 +232,7 @@ nav{
         width: 1px;
         height: 210px;
         background: #e2e2e2;
-        transition: all 0.8s;
+        transition: all 0.4s;
     } 
     .sub_menu dt a{ 
         font-size: 14px;

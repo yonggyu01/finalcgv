@@ -66,10 +66,17 @@ fieldset{
 }
 .firstol li:not(:first-child,:nth-child(5),:nth-child(9),:nth-child(13)){
     margin-left: 60px;
+    margin-bottom: 50px;
 }
 .firstol li{
     cursor: pointer;
+
 }
+.firstol li:not(:nth-child(-n+10)){
+    display: none;
+}
+
+
 .num_rank{
 display: flex;
 height: 28px;
@@ -162,9 +169,9 @@ font-weight: bold;
  }
 .textwrap p{font-size: 0.9em;color:gray}
 .resultdate{font-size: 0.8em;}
-.ticketsales{color:black}
+.ticketsales{color:black;line-height: 17px;}
 .textwrap span{
-    font-size: 0.9em;
+    font-size: 14px;
     
 }
 .textwrap{width: 197px;
@@ -176,7 +183,7 @@ margin-bottom: 20px;}
     width: 100%;
 }
 .textwrap> a{
-    background-color: orangered;
+    background-image: linear-gradient(to left, rgb(255, 115, 86), rgb(251, 67, 87));
     display: flex;
     justify-content: center;
     align-items: center;

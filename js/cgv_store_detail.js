@@ -28,7 +28,7 @@ window.onload= function(){
     let cacul = defaultprice
     let resultwindow = document.querySelector('.result')
     total_result.innerHTML = price.innerHTML
-    let resultview = Number(document.querySelector('.result').innerHTML)
+    let resultview = Number(document.querySelector('.result a').innerHTML)
     document.querySelector('.clacul').onclick=function(e){
         let selector = e.target.id || e.target.classList.value
         console.log(resultview)

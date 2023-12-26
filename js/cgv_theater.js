@@ -130,7 +130,11 @@ info[0].style.display = 'block'
 document.querySelectorAll('.day>li').forEach(function(item,idx){
     item.onmouseenter = function(){
         info[idx].style.display = 'block'
+        console.log(info[idx].children.length,info[idx].children[0].getBoundingClientRect().height)
         wrapboxheight.style.height = (info[idx].children.length * info[idx].children[0].getBoundingClientRect().height) + 'px'
+        // 이거 높이가 다른 li가 있어서 (180도 있고 260도 있음 근데 나는 260으로 일괄 적용해서
+        // 실제 결과값이 더 높게 적용됨, 해결방안은 li들의 높이를 전부 배열로 받아서)
+        // 해당배열을 일일이 순회하면서 곱해주면 되는데.. 그냥 이대로 가자... 크게 차이가 없으니
         for(i=0; i<info.length; i++){
             if(idx != i){
              info[i].style.display = 'none'

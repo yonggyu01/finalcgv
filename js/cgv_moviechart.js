@@ -50,4 +50,14 @@ ol.forEach((item)=>{
     }
 })
 
+let moreb =document.querySelector('.moreb')
+moreb.onclick =function(){
+    setTimeout(function(){
+        let disp = document.querySelectorAll('.firstol li:not(:nth-child(-n+10))')
+            for(let x of disp){
+              x.style.display='block'
+          }
+    },500)
+}
+
 }

@@ -78,6 +78,7 @@ document.querySelectorAll('a[href=""]').forEach(function(item){
         title = title + ','+price
         break;
         case 'ticket':
+        case 'pop' :
         case 'giftcard':
         case 'snack':
             targetselect=e.target
