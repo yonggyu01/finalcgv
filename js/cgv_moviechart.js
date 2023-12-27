@@ -50,14 +50,17 @@ ol.forEach((item)=>{
     }
 })
 
-let moreb =document.querySelector('.moreb')
+let moreb =document.querySelector('.moreb'),timemm=0,pp,tim=document.querySelectorAll('.firstol li:not(:nth-child(-n+10))');
 moreb.onclick =function(){
-    setTimeout(function(){
-        let disp = document.querySelectorAll('.firstol li:not(:nth-child(-n+10))')
-            for(let x of disp){
-              x.style.display='block'
-          }
-    },500)
+    if(timemm == 0 ){
+        pp = setInterval(function(){
+            fetchmore().next
+            timemm++
+        },500)
+    }else if(timemm > 6){
+        clearInterval(pp)
+    }
+    
 }
 let btn_gotoTop= document.querySelector('.btn_gotoTop')
 btn_gotoTop.onclick =function(){
@@ -67,4 +70,11 @@ let btn_close = document.querySelector('.btn_close')
 btn_close.onclick=function(e){
     e.target.parentElement.parentElement.parentElement.style.display='none'
 }
+
+function* fetchmore(){  
+    for(let x of tim){
+        yield x.style.display = 'block'
+    }
+}
+
 }

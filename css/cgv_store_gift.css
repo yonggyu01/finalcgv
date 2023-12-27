@@ -112,7 +112,8 @@ font-weight: bold;}
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    gap :50px;
     margin-bottom: 50px;
 }
 .storemainwrapbox h3{
