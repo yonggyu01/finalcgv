@@ -43,7 +43,7 @@ function daymaker(num){
     let date ='';
     switch (num%7){
         case 0 :
-            date= '일'
+        date= '일'
         break;
         case 1 :
         date='월'
@@ -70,9 +70,16 @@ let getmonth = date.getMonth()+1 // +1 시켜야함
 // console.log(date.getDay()) // 0 일 1 월 2 화 3 수 4 목 5 금 6 토
 let day_list = document.querySelectorAll('.day_list')
 day_list.forEach(function(item,idx){
+    console.log(daymaker(getday+idx))
     item.children[0].childNodes[2].innerHTML=daymaker(getday+idx)
-    item.children[1].innerHTML = getdate + idx
-    item.children[0].childNodes[0].textContent = getmonth +'월'
+    if(getdate+idx <= 31){
+        item.children[1].innerHTML = getdate + idx
+        item.children[0].childNodes[0].textContent = getmonth +'월'
+    }else if(getdate+idx > 31){
+        item.children[1].innerHTML = getdate-31+idx 
+        item.children[0].childNodes[0].textContent = (getmonth-11) +'월'
+    }
+   
     item.onmouseenter=function(){
         item.classList.add('on')
         for(i=0;i<day_list.length;i++){
