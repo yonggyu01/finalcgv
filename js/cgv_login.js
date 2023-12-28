@@ -52,7 +52,7 @@ loginbtn.onclick=function(){
         document.querySelector('.login_wrap2').style.display ='flex'
         document.querySelector('.login_wrap2').innerHTML=`<h2>${logininput.value}님 로그인에 성공하셨습니다.</h2>`
         setTimeout(function(){
-            history.back()
+            location.href= '../index.html'
         },1500)
     }else{
         alert('없는 아이디 입니다. 회원가입화면으로 이동합니다.')
