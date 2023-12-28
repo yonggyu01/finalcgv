@@ -1,0 +1,125 @@
+
+table,tr,td,th{
+    border-spacing: 0;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+fieldset{
+    border: 0 none;
+}
+.xxx{
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+#joinform{
+    width: 800px;
+    margin: 0 auto;
+    border: 1px solid rgba(0, 0, 0, 0.174);
+    box-sizing: border-box;
+}
+caption{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 15px;
+}
+.whitebox{
+    /* height: 1px; */
+    border: 50px solid transparent;
+    margin-bottom: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* background-color: #f8f8f8; */
+}
+fieldset table tbody tr{
+
+    width: 800px;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+
+}
+thead> tr> th{
+    text-align: start;
+    padding-left: 20px;
+    padding-bottom: 15px;
+}
+
+tbody{
+    width: 800px;
+}
+fieldset table tbody th {
+    border-collapse: collapse;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.174);
+    width: 150px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box  ;
+}
+fieldset table tbody td:not(.lastone){
+    border-collapse: collapse;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.174);
+    display: flex;
+    gap: 10px;
+    width: 649px;
+    height: 70px;
+    box-sizing: border-box  ;
+    align-items: center;
+}
+.lastone{
+    display: flex;
+    border-collapse: collapse;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.174);
+    width: 649px;
+    height: 70px;
+    box-sizing: border-box  ;
+    align-items: center;
+}
+tbody input{
+    font-size: 15px;
+    width: 150px;
+}
+
+.wrapbox{
+    width: 800px;
+    height: 80px;
+    
+    display: flex;
+    justify-content: center;
+    align-items : center;
+   
+}
+.trhe button{
+    margin-right: 10px;
+}
+.trhe{
+    height: 70px;
+}
+#joinbtn,#backbtn{
+    height: 50px;
+    width: 150px;
+    margin-right: 5px;
+}
+#id_check{
+    width: 100px;
+    box-sizing: border-box;
+}
+.wrapbox2{
+    display: flex;
+    flex-flow: row wrap;
+    gap:5px;
+}
+.joinpage{
+    margin-bottom: 50px;
+}
+tbody tr:last-child td input{
+    width: 30px;
+
+}

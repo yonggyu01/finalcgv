@@ -1,7 +1,9 @@
 function imgchange(url){
    document.querySelector('#special_img').src = url 
+   
 }
 window.onload =function(){
+    
     let chartnum=0,chartnum2=0,eventnum=0,automode=0,eventtime=0,autotimer;
     document.querySelector('.familysite_list').style.display ='none'
     window.onclick = function(e){
@@ -175,6 +177,11 @@ window.onload =function(){
 
     document.querySelector('.familysite_wrap h3').onclick = function(){
         document.querySelector('.familysite_list').style.display =  document.querySelector('.familysite_list').style.display =='none'? 'block' : 'none'
+        if(document.querySelector('.familysite_list').style.display =='block'){
+            document.querySelector('.familysite_wrap h3 a').style.background='url(img/arrow_D_up.png) 146px no-repeat'
+        }else{
+            document.querySelector('.familysite_wrap h3 a').style.background='url(img/arrow_D.png) 146px no-repeat'
+        }
     }
     let windowYscroll=''
     let fixnav = document.querySelector('.fixedNav')

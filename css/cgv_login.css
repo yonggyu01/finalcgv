@@ -1,0 +1,79 @@
+.login_wrap{
+    width: 980px;
+    margin: auto;
+    border: 100px solid transparent;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.login_wrap legend{
+    position: absolute;
+    top : -30px;
+    background-color: orangered;
+    color: white;
+    width:100px;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    font-weight: bold;
+}   
+.login_wrap fieldset{
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+    width: 450px ;
+    height: 300px;
+}
+.login_wrap .logwrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 45px;
+}
+.login_wrap .logwrap>p{
+    margin-bottom: 15px;
+}
+.logwrap input{
+    margin-bottom: 10px;
+    width: 250px;
+    height: 30px;
+    font-size: 18px;
+    padding-left: 5px;
+    box-sizing: border-box  ;
+}
+#loginbtn{
+    color: white;
+    background-color: orange;
+    width: 250px;
+    font-size: 20px;
+    border: 1px solid white;
+    outline: 2px solid orange;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.signbtn{
+    color:white;
+    background-color: rgb(13, 252, 141);
+    display: block;
+    width: 250px;
+    height: 30px;
+    font-size: 20px;
+    display: flex;
+    border: 1px solid white;
+    outline: 2px solid rgb(13, 252, 141);
+    align-items: center;
+    justify-content: center;
+}
+.login_wrap2{
+    display: none;
+    width: 980px;
+    margin: auto;
+    border: 100px solid transparent;
+    position: relative;
+
+    justify-content: center;
+}

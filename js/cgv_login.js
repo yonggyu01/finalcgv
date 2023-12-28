@@ -1,8 +1,6 @@
-window.onload =function(){
-    //푸터
-    document.querySelector('.familysite_list').style.display ='none'
-//스크롤
-document.querySelector('.familysite_wrap h3').onclick = function(){
+window.onload = function(){
+  //스크롤
+  document.querySelector('.familysite_wrap h3').onclick = function(){
     document.querySelector('.familysite_list').style.display =  document.querySelector('.familysite_list').style.display =='none'? 'block' : 'none'
     if(document.querySelector('.familysite_list').style.display =='block'){
         document.querySelector('.familysite_wrap h3 a').style.background='url(../img/arrow_D_up.png) 146px no-repeat'
@@ -29,42 +27,13 @@ window.onscroll = function(){
         footertopbtn.style.display = 'none'
     }
 }
-let fixsub = document.querySelectorAll('.fixedNav_wrap .sub_menu,.fixedNav_wrap .nav_bg')
-document.querySelectorAll('.fixedNav_wrap .sub_menu,.fixedNav_wrap .nav_bg')[0].style.top='60px'
 
-fixnav.onmouseenter = function(){
-    for(let x of fixsub){
-        x.style='height:270px'
-    } document.querySelectorAll('.fixedNav_wrap .sub_menu,.fixedNav_wrap .nav_bg')[0].style.top='60px'
-}
-fixnav.onmouseleave=function(){
-    for(let x of fixsub){
-        x.style='height:0px'
-        document.querySelectorAll('.fixedNav_wrap .sub_menu,.fixedNav_wrap .nav_bg')[0].style.top='60px'
-    }
-}
 // 헤더
 document.querySelectorAll('a[href=""]').forEach(function(item){
-    item.setAttribute('href','#none')
- })
-//선택
-let ol = document.querySelectorAll('.firstol li')
-ol.forEach((item)=>{
-    item.onclick=function(){
-        window.location = '../html/cgv_movie_cart_detail.html'
-    }
+item.setAttribute('href','#none')
 })
 
-let moreb =document.querySelector('.moreb'),tim=document.querySelectorAll('.firstol li:not(:nth-child(-n+10))');
-moreb.onclick =function(){
-    setTimeout(function(){
-        for(let x of tim){
-         x.style.display = 'block'
-        }
-        },500)
-  
-    
-}
+//끄기버튼
 let btn_gotoTop= document.querySelector('.btn_gotoTop')
 btn_gotoTop.onclick =function(){
     window.scrollTo({top : 0,behavior:'smooth'})
@@ -72,5 +41,23 @@ btn_gotoTop.onclick =function(){
 let btn_close = document.querySelector('.btn_close')
 btn_close.onclick=function(e){
     e.target.parentElement.parentElement.parentElement.style.display='none'
+}
+// 로그인버튼
+
+const loginbtn = document.getElementById('loginbtn'),logininput=document.getElementById('user_loginID'),loginpass=document.getElementById('user_loginPass')
+
+loginbtn.onclick=function(){
+    if(window.localStorage[logininput.value] && window.localStorage[`${logininput.value}_pass`] ){
+        document.querySelector('.login_wrap').style.display ='none'
+        document.querySelector('.login_wrap2').style.display ='flex'
+        document.querySelector('.login_wrap2').innerHTML=`<h2>${logininput.value}님 로그인에 성공하셨습니다.</h2>`
+        setTimeout(function(){
+            history.back()
+        },1500)
+    }else{
+        alert('없는 아이디 입니다. 회원가입화면으로 이동합니다.')
+        location.href = "../html/CGV_sign.html"
+    }
+
 }
 }

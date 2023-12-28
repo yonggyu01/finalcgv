@@ -3,6 +3,7 @@ let citylist = document.querySelectorAll('.city_tit>li')
 let area = document.querySelectorAll('.area')
 area[0].style.display = 'block'
 document.querySelector('.grade_popup').style.display='none'
+document.querySelector('.familysite_list').style.display ='none'
 citylist.forEach(function(item,idx){
     item.onclick = function(){
         for(let i = 0; i<citylist.length; i++){
@@ -125,6 +126,11 @@ page = window.pageYOffset
 
 document.querySelector('.familysite_wrap h3').onclick = function(){
     document.querySelector('.familysite_list').style.display =  document.querySelector('.familysite_list').style.display =='none'? 'block' : 'none'
+    if(document.querySelector('.familysite_list').style.display =='block'){
+        document.querySelector('.familysite_wrap h3 a').style.background='url(../img/arrow_D_up.png) 146px no-repeat'
+    }else{
+        document.querySelector('.familysite_wrap h3 a').style.background='url(../img/arrow_D.png) 146px no-repeat'
+    }
 }
 let windowYscroll=''
 let fixnav = document.querySelector('.fixedNav')

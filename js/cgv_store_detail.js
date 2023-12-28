@@ -1,4 +1,5 @@
 window.onload= function(){
+    document.querySelector('.familysite_list').style.display ='none'
     let gettext,getsrc,splitdot=/,/g;
     // 처음 로딩시 로컬저장소에서 자료 받아오는 버튼임
     function getlocalsave(){
@@ -114,9 +115,14 @@ window.onload= function(){
         }
     }
 
-
+//스크롤
     document.querySelector('.familysite_wrap h3').onclick = function(){
         document.querySelector('.familysite_list').style.display =  document.querySelector('.familysite_list').style.display =='none'? 'block' : 'none'
+        if(document.querySelector('.familysite_list').style.display =='block'){
+            document.querySelector('.familysite_wrap h3 a').style.background='url(../img/arrow_D_up.png) 146px no-repeat'
+        }else{
+            document.querySelector('.familysite_wrap h3 a').style.background='url(../img/arrow_D.png) 146px no-repeat'
+        }
     }
     let windowYscroll=''
     let fixnav = document.querySelector('.fixedNav')

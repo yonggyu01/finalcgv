@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>snack</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/cgv_store_snack.css">
-    <script src="../js/cgv_store.js"> </script>
-
+    <link rel="stylesheet" href="../css/cgv_login.css">
+    <script defer src="../js/cgv_login.js"> </script>
+    </script>
+    <title>로그인페이지
+    </title>
 </head>
 <body>
     <div id="cgvWrap">
@@ -199,119 +200,32 @@
             </nav>  
 
         </header>
+<main>  
+<div class="login_wrap">
 
-    <main id='main' class = 'main'>
-        <div class="fullsizewrap">
-            <a href="../html/CGV_store.html"><h1> 스토어 </h1></a>
-            <div class="storetapmenu">
-                <ul>
-                    <li><a href="../html/CGV_store_pack.html">패키지</a></li>
-                    <li><a href="../html/CGV_store_movieticket.html">영화관람권</a></li>
-                    <li><a href="../html/CGV_store_gift.html">기프트카드</a></li>
-                    <li><a href="../html/CGV_store_combo.html" >콤보</a></li>
-                    <li><a href="../html/CGV_store_pop.html" >팝콘</a></li>
-                    <li><a href="../html/CGV_store_snack.html" class="font_red">스낵</a></li>
-                 </ul>
-                 <ul class= "storegiftcon">
-                     <li><a href="#none">내 기프트콘 <span>0</span></a></li>
-                     <li><a href="#none">장바구니 <span>0</span> </a></li>
-                 </ul>
+    <form action="" method="get" name="login">
+        <fieldset>
+            <legend>
+                로그인
+            </legend>
+            <div class="logwrap">
+            <p>아이디와 비밀번호를 입력하신 후 , 로그인 버튼을 눌러주세요</p>
+            <input type="text" id="user_loginID" placeholder="아이디 입력"> 
+            <input type="password" name="pass" id="user_loginPass" placeholder="비밀번호 입력">
+            <input type="button" value="로그인" id="loginbtn">  
+            <a href="../html/CGV_sign.html" class="signbtn">회원가입</a>  
+
             </div>
-       <div class="storemainwrapbox">
-        <ul>
-             <li> <h2>스낵 <span>출출할땐 다양한 스낵이 정답이죠</span></h2>
-                <ul>
-                    <li>
-                        <div>
-                        <div class="packwrap">
-                        <div class="packhoverwrap">
-                            <img src="../images/스낵1.jpg" alt="콤보1" data-id="snack">
-                            <div class="hoverbox1">
-                                <a href="#none">장바구니</a>
-                                <a href="#none">선물하기</a>
-                                <a href="#none">구매하기</a>
-                            </div>
-                        </div>
-                        <h3>칠리치즈나쵸</h3>
-                        <p>치즈가 가득</p>   
-                        <p class ="packbold">5,000원</p> 
-                        </div>
-                        </div>
-                    </li>
-                    <li><div>
-                        <div class="packwrap">
-                                            <div class="packhoverwrap">
-                        <img src="../images/스낵2.jpg" alt="핫도그" data-id="snack">
-                                            <div class="hoverbox1">
-                                <a href="#none">장바구니</a>
-                                <a href="#none">선물하기</a>
-                                <a href="#none">구매하기</a>
-                            </div>
-                        </div>
-                        <h3>플레인핫도그</h3>
-                        <p>플레인 핫도그</p>   
-                        <p class ="packbold">6,000원</p> 
-                        </div>
-                        </div>
-                    </li>
+        </fieldset>
+    </form>
 
-                    <li><div>
-                        <div class="packwrap">
-                                            <div class="packhoverwrap">
-                        <img src="../images/스낵3.jpg" alt="칠리치즈핫도그" data-id="snack">
-                                            <div class="hoverbox1">
-                                <a href="#none">장바구니</a>
-                                <a href="#none">선물하기</a>
-                                <a href="#none">구매하기</a>
-                            </div>
-                        </div>
-                        <h3>칠리치즈핫도그</h3>
-                        <p>핫도그 칠리소스 추가</p>   
-                        <p class ="packbold">7,000원</p> 
-                        </div>
-                        </div>
-                    </li>
-
-                    <li><div>
-                        <div class="packwrap">
-                                            <div class="packhoverwrap">
-                        <img src="../images/스낵4.jpg" alt="맛밤" data-id="snack">
-                                            <div class="hoverbox1">
-                                <a href="#none">장바구니</a>
-                                <a href="#none">선물하기</a>
-                                <a href="#none">구매하기</a>
-                            </div>
-                        </div>
-                        <h3>맛밤</h3>
-                        <p>맛밤</p>
-                        <p class ="packbold">3,500원</p> 
-                        </div>
-                        </div>
-                    </li>
-
-                    <li><div>
-                        <div class="packwrap">
-                                            <div class="packhoverwrap">
-                        <img src="../images/스낵5.jpg" alt="오징어" data-id="snack">
-                                            <div class="hoverbox1">
-                                <a href="#none">장바구니</a>
-                                <a href="#none">선물하기</a>
-                                <a href="#none">구매하기</a>
-                            </div>
-                        </div>
-                        <h3>먹물향 가득 오징어</h3>
-                        <p>먹물향 0.5% 첨가</p>
-                        <p class ="packbold">10,000원</p> 
-                        </div>
-                        </div>
-                    </li>
-                
-            </ul>
-        </li>
-    </ul>
-       </div>
 </div>
+<div class="login_wrap2">
+
+</div>
+
 </main>
+
 <footer>
     <div class="footer_ad">
         <a href="#none">
@@ -389,5 +303,8 @@
 </footer>
 
 </div>
+
+
+
 </body>
 </html>

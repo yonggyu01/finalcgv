@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>snack</title>
+
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/cgv_store_snack.css">
-    <script src="../js/cgv_store.js"> </script>
-
+    <link rel="stylesheet" href="../css/cgv_sign.css">
+    <script defer src="../js/cgv_sign.js"> </script>
+    </script>
+    <title>회원가입페이지
+    </title>
 </head>
 <body>
     <div id="cgvWrap">
@@ -200,118 +202,89 @@
 
         </header>
 
-    <main id='main' class = 'main'>
-        <div class="fullsizewrap">
-            <a href="../html/CGV_store.html"><h1> 스토어 </h1></a>
-            <div class="storetapmenu">
-                <ul>
-                    <li><a href="../html/CGV_store_pack.html">패키지</a></li>
-                    <li><a href="../html/CGV_store_movieticket.html">영화관람권</a></li>
-                    <li><a href="../html/CGV_store_gift.html">기프트카드</a></li>
-                    <li><a href="../html/CGV_store_combo.html" >콤보</a></li>
-                    <li><a href="../html/CGV_store_pop.html" >팝콘</a></li>
-                    <li><a href="../html/CGV_store_snack.html" class="font_red">스낵</a></li>
-                 </ul>
-                 <ul class= "storegiftcon">
-                     <li><a href="#none">내 기프트콘 <span>0</span></a></li>
-                     <li><a href="#none">장바구니 <span>0</span> </a></li>
-                 </ul>
-            </div>
-       <div class="storemainwrapbox">
-        <ul>
-             <li> <h2>스낵 <span>출출할땐 다양한 스낵이 정답이죠</span></h2>
-                <ul>
-                    <li>
-                        <div>
-                        <div class="packwrap">
-                        <div class="packhoverwrap">
-                            <img src="../images/스낵1.jpg" alt="콤보1" data-id="snack">
-                            <div class="hoverbox1">
-                                <a href="#none">장바구니</a>
-                                <a href="#none">선물하기</a>
-                                <a href="#none">구매하기</a>
-                            </div>
-                        </div>
-                        <h3>칠리치즈나쵸</h3>
-                        <p>치즈가 가득</p>   
-                        <p class ="packbold">5,000원</p> 
-                        </div>
-                        </div>
-                    </li>
-                    <li><div>
-                        <div class="packwrap">
-                                            <div class="packhoverwrap">
-                        <img src="../images/스낵2.jpg" alt="핫도그" data-id="snack">
-                                            <div class="hoverbox1">
-                                <a href="#none">장바구니</a>
-                                <a href="#none">선물하기</a>
-                                <a href="#none">구매하기</a>
-                            </div>
-                        </div>
-                        <h3>플레인핫도그</h3>
-                        <p>플레인 핫도그</p>   
-                        <p class ="packbold">6,000원</p> 
-                        </div>
-                        </div>
-                    </li>
+    <div class="whitebox">
+        <img src="../images/img_join_hd.jpg" alt="회원가입">
+    </div>
 
-                    <li><div>
-                        <div class="packwrap">
-                                            <div class="packhoverwrap">
-                        <img src="../images/스낵3.jpg" alt="칠리치즈핫도그" data-id="snack">
-                                            <div class="hoverbox1">
-                                <a href="#none">장바구니</a>
-                                <a href="#none">선물하기</a>
-                                <a href="#none">구매하기</a>
-                            </div>
-                        </div>
-                        <h3>칠리치즈핫도그</h3>
-                        <p>핫도그 칠리소스 추가</p>   
-                        <p class ="packbold">7,000원</p> 
-                        </div>
-                        </div>
-                    </li>
-
-                    <li><div>
-                        <div class="packwrap">
-                                            <div class="packhoverwrap">
-                        <img src="../images/스낵4.jpg" alt="맛밤" data-id="snack">
-                                            <div class="hoverbox1">
-                                <a href="#none">장바구니</a>
-                                <a href="#none">선물하기</a>
-                                <a href="#none">구매하기</a>
-                            </div>
-                        </div>
-                        <h3>맛밤</h3>
-                        <p>맛밤</p>
-                        <p class ="packbold">3,500원</p> 
-                        </div>
-                        </div>
-                    </li>
-
-                    <li><div>
-                        <div class="packwrap">
-                                            <div class="packhoverwrap">
-                        <img src="../images/스낵5.jpg" alt="오징어" data-id="snack">
-                                            <div class="hoverbox1">
-                                <a href="#none">장바구니</a>
-                                <a href="#none">선물하기</a>
-                                <a href="#none">구매하기</a>
-                            </div>
-                        </div>
-                        <h3>먹물향 가득 오징어</h3>
-                        <p>먹물향 0.5% 첨가</p>
-                        <p class ="packbold">10,000원</p> 
-                        </div>
-                        </div>
-                    </li>
+<section id="joinpage" class="joinpage">
+<form action="insert.php" method="post" name="join" id="joinform" onsubmit="return namecheck()">
+<fieldset>
+    <legend class="xxx">CGV 회원가입</legend>
+    <table>
+        <caption>CGV 회원가입</caption>
+       <thead>
+        <tr>
+            <th> * 는 필수 입력항목입니다</th>
+        </tr>
+    </thead>
+        <tbody>
+        
+        <tr>
+            
+            <th><label for="user_name">* 이름</label> <!--for안에는 id값 넣어주면됨 -->
+            </th>
+            <td><input type="text" id ="user_name" placeholder="이름"></td>
+        </tr>
+        <tr>
+            <th><label for="user_id">아이디</label> </th>
+            <td><input type="text" id ="user_id" placeholder="아이디" name="user_id" maxlength="12" minlength="4">
                 
-            </ul>
-        </li>
-    </ul>
-       </div>
-</div>
-</main>
+                <input type="button" value="중복확인" id="id_check"><br><span>4~12글자 입력 가능</span>
+                <span class="idresultbox" style="margin-left: 10px;"></span> </td>
+        </tr>
+        <tr>
+            <th><label for="user_pass">비밀번호</label> </th>
+            <td><input type="password" id ="user_pass" placeholder="비밀번호" name="user_pass"></td>
+        </tr>
+        <tr>
+            <th><label for="user_passcheck">비밀번호 확인</label> </th>
+            <td><input type="password" id ="user_passcheck" placeholder="비밀번호 확인"></td>
+        </tr>
+        <tr>
+            <th><label for="user_phone">전화번호</label> </th>
+            <td><input type="text" id ="user_phone" placeholder="전화번호입력"> 
+                <p>"-"없이 숫자만</p> </td>
+        </tr>
+        <tr>
+            <th>이메일<label for="user_email" class="xxx">아이디 입력</label> </th> <!--접근성 검사시... 통과하긴 힘들지만.. -->
+            <td><input type="text" id ="user_email" placeholder="이메일"><span>@</span>
+                <label for="user_emailaddress" class="xxx">도메인 입력</label>
+                <input type="text" id ="user_emailaddress" placeholder="도메인 입력">
+                <select name="mailaddress" id="mailaddress" onchange="selectedaddress()">
+                    <option value="usertext">직접입력</option>
+                    <option value="naver.com">네이버</option>
+                    <option value="daum.net">다음</option>
+                    <option value="nate.com">네이트</option>
+                    <option value="google.com">구글</option>
+                </select></td>
+        </tr>
+
+        <tr>
+            <th><label for="birth"></label> 생년월일</th>
+            <td>
+             <input type="text" name="birth" id="birth" placeholder="생년월일"><p>"-"없이 숫자만</p></td>
+        </tr>
+        <tr class="trhe">
+            <th class="trhe"><label for="user_address1">주소</label></th>
+            <td class="trhe"> <div class="wrapbox2"><input type="text" id ="user_address1" placeholder="주소입력"><button type="button">검색</button>
+                <input type="text" id ="user_address2" placeholder="기본주소입력">
+                <input type="text" id ="user_address3" placeholder="상세주소입력"></div> </td>
+        </tr>
+        <tr>
+            <th><label for="user_select"></label> 약관동의</th>
+            <td class="lastone"><input type="radio" name="user_select" id ="user_select" name="user_select"> <p>네</p> <input type="radio" id ="user_select" name="user_select" name="user_select"><p>아니요</p></td>
+        </tr>
+    </tbody>
+    </table>
+    <div class="wrapbox">  <button type="submit" id="joinbtn"> 회원가입하기 </button><button type="button" id="backbtn"> 돌아가기 </button></div>
+      
+</fieldset>
+
+</form>
+</section>
+<section class="sign_succ">
+
+</section>
 <footer>
     <div class="footer_ad">
         <a href="#none">
@@ -389,5 +362,8 @@
 </footer>
 
 </div>
+
+
+
 </body>
 </html>

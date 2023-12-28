@@ -276,7 +276,7 @@ nav{
 .search_wrap{
     line-height: 40px;
 }
-    input{
+.fixedNav input, header input{
         width: 160px;
         padding: 0 0 0 7px;
         font-size: 16px;
