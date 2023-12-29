@@ -386,6 +386,7 @@ video{
             border: 1px solid #fff;
             text-indent: -999em;
             margin-left:12px;
+            display: none;
         }
         .btn_Stop{
             background: url(../img/pause.png) center/ 18px  18px  no-repeat;
@@ -395,7 +396,7 @@ video{
             border: 1px solid #fff;
             text-indent: -999em;
             margin-left:12px;
-            display: none;
+            
         }
         .btn_soundOn{
             display:inline-block;
@@ -416,6 +417,7 @@ video{
             border: 1px solid #fff;
             text-indent: -999em;
             display: none;
+            margin-left: 10px;
         }
 
 
