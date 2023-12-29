@@ -45,15 +45,31 @@ btn_close.onclick=function(e){
 // 로그인버튼
 
 const loginbtn = document.getElementById('loginbtn'),logininput=document.getElementById('user_loginID'),loginpass=document.getElementById('user_loginPass')
-
+let notpa=0;
 loginbtn.onclick=function(){
     if(window.localStorage[logininput.value] && window.localStorage[`${logininput.value}_pass`] ){
-        document.querySelector('.login_wrap').style.display ='none'
-        document.querySelector('.login_wrap2').style.display ='flex'
-        document.querySelector('.login_wrap2').innerHTML=`<h2>${logininput.value}님 로그인에 성공하셨습니다.</h2>`
-        setTimeout(function(){
-            location.href= '../index.html'
-        },1500)
+        if((logininput.value==window.localStorage[logininput.value])&&(loginpass.value==window.localStorage[`${logininput.value}_pass`])){
+            document.querySelector('.login_wrap').style.display ='none'
+            document.querySelector('.login_wrap2').style.display ='flex'
+            document.querySelector('.login_wrap2').innerHTML=`<h2>${logininput.value}님 로그인에 성공하셨습니다.</h2>`
+            setTimeout(function(){
+                location.href= '../index.html'
+            },1500)
+        }else if((logininput.value==window.localStorage[logininput.value])&&(loginpass.value!=window.localStorage[`${logininput.value}_pass`])){
+            if(notpa<3){
+                alert('비밀번호가 틀렸습니다.')
+                loginpass.value='';
+                notpa++
+            }else{
+                alert('비밀번호 입력 초과로 회원가입페이지로 넘어갑니다.')
+                loginpass.value='';
+                setTimeout(function(){
+                    location.href= '../html/CGV_sign.html'
+                },1500)
+            }
+        }
+        
+        
     }else{
         alert('없는 아이디 입니다. 회원가입화면으로 이동합니다.')
         location.href = "../html/CGV_sign.html"
