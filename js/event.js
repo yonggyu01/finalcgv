@@ -1,4 +1,14 @@
 window.addEventListener('load',function(){
+        //로그인 확인
+        if(window.localStorage?.Loging){
+            if(window.localStorage.Loging=='true'){
+                document.querySelectorAll('.login_menu li')[0].style.display='none'
+                document.querySelectorAll('.login_menu li')[1].style.display='none'
+            }else{
+                document.querySelectorAll('.login_menu li')[0].style.display='block'
+                document.querySelectorAll('.login_menu li')[1].style.display='block'
+            }
+        }
     document.querySelector('.familysite_list').style.display ='none'
   this.setTimeout(function(){
     window.scrollTo({

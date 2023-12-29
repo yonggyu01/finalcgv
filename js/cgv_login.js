@@ -1,4 +1,15 @@
 window.onload = function(){
+    //로그인 확인
+    if(window.localStorage?.Loging){
+        if(window.localStorage.Loging=='true'){
+            document.querySelectorAll('.login_menu li')[0].style.display='none'
+            document.querySelectorAll('.login_menu li')[1].style.display='none'
+        }else{
+            document.querySelectorAll('.login_menu li')[0].style.display='block'
+            document.querySelectorAll('.login_menu li')[1].style.display='block'
+        }
+    }
+
   //스크롤
   document.querySelector('.familysite_wrap h3').onclick = function(){
     document.querySelector('.familysite_list').style.display =  document.querySelector('.familysite_list').style.display =='none'? 'block' : 'none'
@@ -53,6 +64,7 @@ loginbtn.onclick=function(){
             document.querySelector('.login_wrap2').style.display ='flex'
             document.querySelector('.login_wrap2').innerHTML=`<h2>${logininput.value}님 로그인에 성공하셨습니다.</h2>`
             setTimeout(function(){
+                window.localStorage.setItem('Loging',true)
                 location.href= '../index.html'
             },1500)
         }else if((logininput.value==window.localStorage[logininput.value])&&(loginpass.value!=window.localStorage[`${logininput.value}_pass`])){

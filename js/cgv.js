@@ -3,7 +3,17 @@ function imgchange(url){
    
 }
 window.onload =function(){
-    
+        //로그인 확인
+        if(window.localStorage?.Loging){
+            if(window.localStorage.Loging=='true'){
+                document.querySelectorAll('.login_menu li')[0].style.display='none'
+                document.querySelectorAll('.login_menu li')[1].style.display='none'
+            }else{
+                document.querySelectorAll('.login_menu li')[0].style.display='block'
+                document.querySelectorAll('.login_menu li')[1].style.display='block'
+            }
+        }
+
     let chartnum=0,chartnum2=0,eventnum=0,automode=0,eventtime=0,autotimer;
     document.querySelector('.familysite_list').style.display ='none'
     window.onclick = function(e){

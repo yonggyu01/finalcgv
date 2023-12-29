@@ -2,6 +2,16 @@ window.onload= function(){
     document.querySelector('.familysite_list').style.display ='none'
     let gettext,getsrc,splitdot=/,/g;
     // 처음 로딩시 로컬저장소에서 자료 받아오는 버튼임
+        //로그인 확인
+        if(window.localStorage?.Loging){
+            if(window.localStorage.Loging=='true'){
+                document.querySelectorAll('.login_menu li')[0].style.display='none'
+                document.querySelectorAll('.login_menu li')[1].style.display='none'
+            }else{
+                document.querySelectorAll('.login_menu li')[0].style.display='block'
+                document.querySelectorAll('.login_menu li')[1].style.display='block'
+            }
+        }
     function getlocalsave(){
         if(!window.localStorage.src){
             return window.history.back();

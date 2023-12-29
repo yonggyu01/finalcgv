@@ -30,7 +30,16 @@
 // e를 인자로 받아서 콘솔로 찍어보면 태그으 ㅣ다양한 정보가 출력됨
 // 유효성검사 순서는 html 작성된 순서대로 작성하자.
 // 글자수 제한은 html태그에 작성해서 maxlength  이런식으로 제한하는경우.. 브라우저에서 제한을 해주는거라서..  하위버전 브라우저에서 사용불가 할수도 있어서...가급적 스크립트로 하자
-
+    //로그인 확인
+    if(window.localStorage?.Loging){
+        if(window.localStorage.Loging=='true'){
+            document.querySelectorAll('.login_menu li')[0].style.display='none'
+            document.querySelectorAll('.login_menu li')[1].style.display='none'
+        }else{
+            document.querySelectorAll('.login_menu li')[0].style.display='block'
+            document.querySelectorAll('.login_menu li')[1].style.display='block'
+        }
+    }
             joinbtn.onclick = function(e){
                 e.preventDefault();
                 for(let x of nonevalue){
