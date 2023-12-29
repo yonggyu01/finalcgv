@@ -35,7 +35,7 @@
                 e.preventDefault();
                 for(let x of nonevalue){
                    if(!x.value){
-                    console.log(x)
+              
                     e.preventDefault();
                     x.focus()
                     return alert(`${x.placeholder}에 내용이 없습니다.`);
@@ -68,7 +68,10 @@
                     window.localStorage.setItem(user_id.value,user_id.value)
                     window.localStorage.setItem(`${user_id.value}_pass`,user_pass.value)
                     document.querySelector('#joinpage').style.display='none'
-                    document.querySelector('.sign_succ').innerHTML = `<h2 style=" display: flex;text-align:center;font-size : 30px;padding-top : 150px;margin:auto;width:980px" >${user_id.value} 님 회원가입에 성공하였습니다.</h2>`
+                    document.querySelector('.sign_succ').innerHTML = `<h2 style=" display: flex;text-align:center;font-size : 30px;padding-top : 150px;margin:0 auto 100px;width:980px;justify-content:center;" >${user_id.value} 님 회원가입에 성공하였습니다.</h2>`
+                    setTimeout(function(){
+                        location.href= '../html/CGV_login.html'
+                    },2000)
                 }
             }
             mailaddress.onchange = function(){
