@@ -157,7 +157,7 @@ document.querySelector('#sortitem').onchange=function(){
     })
     function clonemaker(object,idx){
     let {num_rank,img,age,cgvflex,title,예매율,tomato,runing}=object;
-    console.log(cloneli.children)
+    // console.log(cloneli.children)
     cloneli[idx].children[0].innerHTML='no'+indexnum 
     cloneli[idx].children[1].children[0].src=img
     switch (age){
